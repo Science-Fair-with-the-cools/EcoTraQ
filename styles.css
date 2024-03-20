@@ -1,0 +1,35 @@
+/* Colour Palette */
+:root {
+    --kaitoke-green: #003e29;
+    --como: #467061;
+    --sandal: #ad7c6a;
+    --walnut: #9d451f;
+    --grey: #bcbdbc;
+    }
+
+/* Styles: */
+
+body{
+    text-align: center;
+    background-color: var(--como);
+    color: var(--sandal);
+}
+h1,h2,h3{
+    color: var(--walnut);
+}
+#header{
+    display: flex;
+    position: sticky;
+    margin: 0;
+    padding: 7px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--grey);
+}
+footer{
+    position: relative;
+    bottom: 0;
+}
+.sites{
+    color: var(--walnut);
+}
