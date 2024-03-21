@@ -1,44 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <link rel="stylesheet" href="styles.css">
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>EcoTraQ (Carbon footprint calculator)</title>
-    </head>
-    <main>
-        <body>
-            <!-- Header to access different parts of the site -->
-            <div id="header">
-                <div class="sites">Personal TraQ</div>
-                <div class="sites">Site TraQ</div>
-            </div>
-            <!-- Brief desc of project -->
-            <div id="project-desc">
-                <h2>Our Mission:</h2>
-                <p>People live their everyday lives oblivious to the fact that every decision they make may alter their impact on our environment. It is our job to ensure our community is aware of how they could reduce, manage, and alter either positively or negatively their carbon footprint. We created a Carbon Footprint Calculator (EcoTraQ), using various coding languages (Hyper Text Markup Language, Cascading Style Sheets, Javascript). Our work is hosted on a website via GitHub, which displays a questionnaire, once filled out the user can see their results alongside average results among Canadians. Lastly, we demonstrate how users can reduce and manage their    carbon footprint using easy-to-follow steps catered towards each individual's results.</p>
-            </div>
 
-            <!-- Questionnaire section -->
-            <div id="form">
-                <h2>Questionnaire:</h2>
-                <div id="questions">
-                    Questions will be featured here:
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <link rel="stylesheet" href="styles.css">
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>EcoTraQ (Carbon footprint calculator)</title>
+        </head>
+        <main>
+            <body>
+                <!-- Header to access different parts of the site -->
+                <div id="header">
+                    <div class="sites">Personal TraQ</div>
+                    <div class="sites">Site TraQ</div>
                 </div>
-                <input type="submit">
-            </div>
+                <!-- Brief desc of project -->
+                <div id="project-desc">
+                    <h2>Our Mission:</h2>
+                    <p>People live their everyday lives oblivious to the fact that every decision they make may alter their impact on our environment. It is our job to ensure our community is aware of how they could reduce, manage, and alter either positively or negatively their carbon footprint. We created a Carbon Footprint Calculator (EcoTraQ), using various coding languages (Hyper Text Markup Language, Cascading Style Sheets, Javascript). Our work is hosted on a website via GitHub, which displays a questionnaire, once filled out the user can see their results alongside average results among Canadians. Lastly, we demonstrate how users can reduce and manage their    carbon footprint using easy-to-follow steps catered towards each individual's results.</p>
+                </div>
 
-            <!-- Footer -->
-            <footer>
-                <h2>About:</h2>
-                <p>Created by:  Cameron Lemoine and Hasan Ahmed</p>
-                <p> - With help from: Will Reavie and Aaron Chung</p>
+              <!-- Questionnaire section -->
+              <div id="form">
+                  <h2>Questionnaire:</h2>
+                <p>Fill out the form to see your impact</p>
+                  <div id="questions">
+                    <!-- sample questionm code copy paste template to add more questions -->
+                  <fieldset>
+                    <label>
+                      <legend>Question 1</legend>
+                      <label for="option1"><input id="option1" type="radio" name="sample" class="inline" checked /> Option 1</label>
+                      <label for="option1"><input id="option1" type="radio" name="sample" class="inline" /> Option 2
+                      </label>
+                      <div>
+                        <legend>Question 2</legend>
+                      <label for="question2">
+                        <select id="question2" name="another-question">
+                          <option value="">(select one)</option>
+                          <option value="1">option1</option>
+                          <option value="2">option2</option>
+                          <option value="3">option3</option>
+                          <option value="4">option4</option>
+                        </select>
+                      </label>
+                      </div>
+                      <!--add js and css for slider-->
+                       <legend>Question 3</legend>
+                      <div class="slidecontainer">
+                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                        <legend>Question 4</legend>
+                        <label for="question4">
+                          <input class="inline" id="question4" type="checkbox" required name="question4" /> option a
+                          <input class="inline" id="question4" type="checkbox" required name="question4" /> option b
+                          <input class="inline" id="question4" type="checkbox" required name="question4" /> option c
+
+                        </label>
+                      </div>
+                  </fieldset>
+                  </div>
+              </div>
+
+              <!-- Footer -->
+              <footer>
+                  <h3>About</h3>
+                <p>Created by Cameron Lemoine and Hasan Ahmed</p>
+                <p>With help from William Reaves and Aaron Chung</p>
+                <p> 
+                 <a href="https://github.com/Science-Fair-with-the-cools/EcoTraQ">GitHub Repository</a> 
+                  <div>
+                  <a href="google.com">ProjectBoard Page</a>
+                    </div>
+                  </p>
                 <div class="buttons">
                     <button id="top-btn" onclick="backToTop()">Back to top</button>
                     <button>SiteTraQ</button>
                 </div>
-            </footer>
-            <script src="scripts.js"></script>
-        </body>
-    </main>
-</html>
+                
+              </footer>
+                <script src="scripts.js"></script>
+              <script src="style.css"></script>
+            </body>
+        </main>
+    </html>
