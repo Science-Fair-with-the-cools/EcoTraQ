@@ -1,10 +1,10 @@
-/* Colour Palette */
+/* Colour Palette  - changed the colours a bit for better reading/look*/
 :root {
     --kaitoke-green: #003e29;
-    --como: #467061;
-    --sandal: #ad7c6a;
-    --walnut: #975f4a;
-    --grey: #bcbdbc;
+    --como: #d5e7b8;
+    --sandal: #845710;
+    --walnut: #633e31;
+    --grey: #8da290;
     }
 
 /* Styles: */
@@ -47,12 +47,14 @@ footer{
 }
 #questions{
     display: flex;
-    background-color: var(--grey);
-    border-radius: 7px;
-    width: 55%;
-    height: 15rem;
+    background-color: white;
+    border-radius: 10px;
+    width: 70%;
+    height: 20rem;
     align-self: center;
+    text-align: center;
 }
+
 #project-desc{
     left: 25%;
     right: 25%;
@@ -68,10 +70,16 @@ input{
     height: 1.7rem;
     left: 22.5%;
     border-radius: 5px;
+    text-align: center;
 }
 button{
     width: 7.75%;
     height: 1.5rem;
+}
+
+fieldset{
+  width: 100%;
+  
 }
 
 
