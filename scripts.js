@@ -15,7 +15,7 @@ const translations = {
     },
     fr: {
           title: "EcoTraQ (Calculatrice d'Impact du Carbone)",
-          subtitle: "notre mission"
+          subtitle: "notre mission",
       projectdesc: "Les gens vivent toutes leurs vies inconscient sur le fait que leurs décisions quotidiennes peuvent impacter notre environnement. C'est notre tâche à assurer que notre communauté devient conscient de l'impact qu'iels ont sur leur empreinte écologique. Nous avons créé un calculateur d'empreinte écologique (EcoTraQ), utilisant une variété de langues de programmations (Langage de balisage d'hypertexte, feuille de style en cascade et JavaScript). Notre œuvre se trouve sur un site web de GitHub, qui affiche un questionnaire. Une fois terminé, l'utilisateur peut voir leurs résultats comparés à ceux des autres Canadiens. Dernièrement, nous démontrons comment l'utilisateur peut réduire et gérer leur empreinte écologique avec des étapes faciles, uniques aux résultats de chaque individu.",
     },
 },
