@@ -15,13 +15,13 @@
     <main>
         <!-- Header to access different parts of the site -->
       <div id="header">
-        <div class="sites">
+        <div class="sites" id="header1">
       <a href="google.com">Personal TraQ
       </a>
 
         </div>
 
-        <div class="sites">
+        <div class="sites" id="header2">
           <a href="google.com">Site TraQ
           </a>
 
@@ -36,7 +36,7 @@
 
         <!-- Questionnaire section -->
         <div id="form">
-            <h2>Questionnaire:</h2>
+            <h2 id="questionnaire">Questionnaire:</h2>
             <div id="questions">
               <fieldset>
                 <label>
@@ -70,17 +70,23 @@
               </fieldset>
             </div>
           <br>
-            <input type="submit">
+            <input id="submit" type="submit">
         </div>
 
         <!-- Footer -->
         <footer>
-            <h2>About:</h2>
-            <p>Created by:  Cameron Lemoine and Hasan Ahmed</p>
-            <p> - With help from: Will Reavie and Aaron Chung</p>
+            <h2 id="about">About:</h2>
+            <p id="credits1">Created by:  Cameron Lemoine and Hasan Ahmed</p>
+            <p id="credits2"> With help from: Will Reavie and Aaron Chung</p>
+          <p> 
+             <a href="https://github.com/Science-Fair-with-the-cools/EcoTraQ" id=github>GitHub Repository</a> 
+              <div>
+              <a href="google.com" id="pbpage">ProjectBoard Page</a>
+                </div>
+              </p>
             <div class="buttons">
-                <button id="top-btn" onclick="backToTop()">Back to top</button>
-                <button>SiteTraQ</button>
+                <button id="topbtn" onclick="backToTop()">Back to top</button>
+                <button id="footerbtn">SiteTraQ</button>
             </div>
         </footer>
     </main>
