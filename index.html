@@ -5,15 +5,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="title">EcoTraQ (Carbon footprint calculator)</title>
+    <link rel="icon" type="image/x-icon" href="https://www.iconpacks.net/icons/2/free-tree-icon-1578-thumb.png">
 </head>
 <body>
   <!-- language buttons -->
+    <button onclick="switchLanguage('en')" id="langbutton-en">English</button>
+    <button onclick="switchLanguage('fr')" id="langbutton-fr">French</button>
 
     <main>
         <!-- Header to access different parts of the site -->
       <div id="header">
-          <button onclick="switchLanguage('en')" id="langbutton-en">English</button>
-          <button onclick="switchLanguage('fr')" id="langbutton-fr">French</button>
         <div class="sites">
       <a href="google.com">Personal TraQ
       </a>
@@ -28,7 +29,7 @@
       </div>
         <!-- Brief desc of project -->
         <div id="projectdesc">
-            <h2 id="subtitle">Our Mission:</h2>
+            <h2>Our Mission:</h2>
           
             <p>People live their everyday lives oblivious to the fact that every decision they make may alter their impact on our environment. It is our job to ensure our community is aware of how they could reduce, manage, and alter either positively or negatively their carbon footprint. We created a Carbon Footprint Calculator (EcoTraQ), using various coding languages (Hyper Text Markup Language, Cascading Style Sheets, Javascript). Our work is hosted on a website via GitHub, which displays a questionnaire, once filled out the user can see their results alongside average results among Canadians. Lastly, we demonstrate how users can reduce and manage their    carbon footprint using easy-to-follow steps catered towards each individual's results.</p>
         </div>
@@ -77,12 +78,6 @@
             <h2>About:</h2>
             <p>Created by:  Cameron Lemoine and Hasan Ahmed</p>
             <p> - With help from: Will Reavie and Aaron Chung</p>
-             <p> 
-                 <a href="https://github.com/Science-Fair-with-the-cools/EcoTraQ">GitHub Repository</a> 
-                  <div>
-                  <a href="google.com">ProjectBoard Page</a>
-                    </div>
-                  </p>
             <div class="buttons">
                 <button id="top-btn" onclick="backToTop()">Back to top</button>
                 <button>SiteTraQ</button>
