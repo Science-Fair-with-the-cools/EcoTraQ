@@ -1,10 +1,10 @@
-/* Colour Palette */
+/* Colour Palette  - changed the colours a bit for better reading/look*/
 :root {
     --kaitoke-green: #003e29;
-    --como: #467061;
-    --sandal: #ad7c6a;
-    --walnut: #975f4a;
-    --grey: #bcbdbc;
+    --como: #d5e7b8;
+    --sandal: #845710;
+    --walnut: #633e31;
+    --grey: #8da290;
     }
 
 /* Styles: */
@@ -33,6 +33,49 @@ h1,h2,h3{
     background-color: var(--grey);
     z-index: 5;
 }
+
+#langbutton-en{
+    background-color: var(--grey);
+    border: none;
+    color: var(--kaitoke-green);
+    font-size: 11px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 25px;
+    transition: 0.3s;
+    
+  
+}
+button,input{
+  background-color: var(--grey);
+  border: none;
+  color: var(--kaitoke-green);
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  padding: 1px;
+  margin: auto;
+  border-radius: 25px;
+  transition: 0.3s;
+  
+}
+
+#langbutton-fr{
+  background-color: var(--grey);
+  border: none;
+  color: var(--kaitoke-green);
+  font-size: 11px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 25px;
+  transition: 0.3s;
+
+}
+
 footer{
     position: relative;
     bottom: 0;
@@ -49,11 +92,41 @@ footer{
     display: flex;
     background-color: var(--grey);
     border-radius: 7px;
-    width: 55%;
-    height: 15rem;
+    width: 80%;
+    height: 30rem;
     align-self: center;
 }
-#project-desc{
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+fieldset label {
+    display: block;
+    margin-bottom: 10px; /* Add space between each question */
+    margin-left: 10px;
+
+}
+
+fieldset label input,
+fieldset label select {
+    margin-right: 5px; /* Add space between the input/select and the label text */
+
+}
+
+#questions {
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    background-color: var(--grey);
+    border-radius: 7px;
+    width: 80%;
+    max-width: 600px; /* Limit the maximum width for better readability */
+    margin: 0 auto; /* Center the questions */
+    padding: 20px; /* Add some padding for better appearance */
+}
+
+#projectdesc{
     left: 25%;
     right: 25%;
     position: relative;
@@ -70,8 +143,32 @@ input{
     border-radius: 5px;
 }
 button{
+    padding-top: 5px;
+    padding-bottom: 5px;
     width: 7.75%;
     height: 1.5rem;
 }
 
+a:link {
+  color: var(--walnut);
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+a:visited {
+  color: var(--sandal);
+  background-color: transparent;
+}
+
+a:hover {
+  color: var(--sandal);
+  background-color: transparent;
+}
+
+a:active {
+  color:var(--walnut);
+  background-color: transparent;
+}
 
