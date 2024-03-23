@@ -1,101 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="title">EcoTraQ (Carbon footprint calculator)</title>
-    <link rel="icon" type="image/x-icon" href="https://www.iconpacks.net/icons/2/free-tree-icon-1578-thumb.png">
-</head>
-<body>
-  <!-- language buttons -->
-    <button onclick="switchLanguage('en')" id="langbutton-en">English</button>
-    <button onclick="switchLanguage('fr')" id="langbutton-fr">French</button>
+<html>
 
-    <main>
-        <!-- Header to access different parts of the site -->
-      <div id="header">
-        <div class="sites" id="header1">
-      <a href="google.com">Personal TraQ
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title id="title">EcoTraQ (Carbon footprint calculator)</title>
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="https://www.iconpacks.net/icons/2/free-tree-icon-1578-thumb.png">
+  </head>
+</head>
+  <body>
+  <!-- language buttons -->
+  <button onclick="switchLanguage('en')" id="langbutton-en">English</button>
+  <button onclick="switchLanguage('fr')" id="langbutton-fr">French</button>
+
+<main>
+
+  <!-- Header to access different parts of the site -->
+  <div id="header">
+    <div class="sites" id="header1">
+  <a href="google.com">Personal TraQ
+  </a>
+
+    </div>
+
+    <div class="sites" id="header2">
+      <a href="google.com">Site TraQ
       </a>
 
-        </div>
+    </div>
+  </div>
+    <!-- Brief desc of project -->
+    <div id="sitetraqdesc">
+        <h2>What is SiteTraQ?</h2>
+        <p>Every single website on the internet has a carbon footprint.Physicl hosting servers use electricity that use non-renewable energy sources to keep our internet alive as we know it. Want to know what a website's annual carbon footprint is? Find out Below!</p>
+    </div>
 
-        <div class="sites" id="header2">
-          <a href="google.com">Site TraQ
-          </a>
-
-        </div>
-      </div>
-        <!-- Brief desc of project -->
-        <div id="projectdesc">
-            <h2>Our Mission:</h2>
-          
-            <p>People live their everyday lives oblivious to the fact that every decision they make may alter their impact on our environment. It is our job to ensure our community is aware of how they could reduce, manage, and alter either positively or negatively their carbon footprint. We created a Carbon Footprint Calculator (EcoTraQ), using various coding languages (Hyper Text Markup Language, Cascading Style Sheets, Javascript). Our work is hosted on a website via GitHub, which displays a questionnaire, once filled out the user can see their results alongside average results among Canadians. Lastly, we demonstrate how users can reduce and manage their    carbon footprint using easy-to-follow steps catered towards each individual's results.</p>
-        </div>
-
-        <!-- Questionnaire section -->
-        <div id="form">
-            <h2 id="questionnaire">Questionnaire:</h2>
-            <div id="questions">
-              <fieldset>
-                <label>
-                <legend>Question 1</legend>
-                <label for="option1"><input id="option1" type="radio" name="sample" class="inline" checked /> Option 1</label>
-                <label for="option1"><input id="option1" type="radio" name="sample" class="inline" /> Option 2
-                </label>
-                <div>
-                  <legend>Question 2</legend>
-                <label for="question2">
-                  <select id="question2" name="another-question">
-                    <option value="">(select one)</option>
-                    <option value="1">option1</option>
-                    <option value="2">option2</option>
-                    <option value="3">option3</option>
-                    <option value="4">option4</option>
-                  </select>
-                </label>
-                </div>
-                <!--add js and css for slider-->
-                 <legend>Question 3</legend>
-                <div class="slidecontainer">
-                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                  <legend>Question 4</legend>
-                  <label for="question4">
-                    <input class="inline" id="question4" type="checkbox" required name="question4" /> option a
-                    <input class="inline" id="question4" type="checkbox" required name="question4" /> option b
-
-                  </label>
-                </div>
-              </fieldset>
-            </div>
-          <br>
-            <input id="submit" type="submit">
-        </div>
-
-        <!-- Footer -->
-        <footer>
-            <h2 id="about">About:</h2>
-            <p id="credits1">Created by:  Cameron Lemoine and Hasan Ahmed</p>
-            <p id="credits2"> With help from: Will Reavie and Aaron Chung</p>
-          <p> 
-             <a href="https://github.com/Science-Fair-with-the-cools/EcoTraQ" id=github>GitHub Repository</a> 
-              <div>
-              <a href="google.com" id="pbpage">ProjectBoard Page</a>
-                <div> 
-                  <br>
-                <a href="google.com">Sources</a>
-                  </div>
-                </div>
-              </p>
-            <div class="buttons">
-                <button id="topbtn" onclick="backToTop()">Back to top</button>
-                <button id="footerbtn">SiteTraQ</button>
-              
-            </div>
-        </footer>
-    </main>
-
-    <script src="scripts.js"></script>
+  <h3>Paste Website Link Here</h3>
+  
+  <input type="text" class="website" placeholder="https://www.example.ca" style="font-size:1.00rem;width:40vw;text-align:center;margin-right:30%">
+  
+  <script src="scripts.js"></script>
 </body>
+  <!-- Footer -->
+  <footer>
+      <h2 id="about">About:</h2>
+      <p id="credits1">Created by:  Cameron Lemoine and Hasan Ahmed</p>
+      <p id="credits2"> With help from: Will Reavie and Aaron Chung</p>
+    <p> 
+       <a href="https://github.com/Science-Fair-with-the-cools/EcoTraQ" id=github>GitHub Repository</a> 
+        <div>
+        <a href="google.com" id="pbpage">ProjectBoard Page</a>
+          <div> 
+            <br>
+          <a href="google.com">Sources</a>
+            </div>
+          </div>
+        </p>
+      <div class="buttons">
+          <button id="topbtn" onclick="backToTop()">Back to top</button>
+          <button id="footerbtn">SiteTraQ</button>
+      </div>
+    </main>
 </html>
