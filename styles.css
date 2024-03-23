@@ -45,9 +45,10 @@ h1,h2,h3{
     margin: 5px;
     border-radius: 25px;
     transition: 0.3s;
-    
-  
+
+
 }
+
 button,input{
   background-color: var(--grey);
   border: none;
@@ -58,10 +59,23 @@ button,input{
   padding: 1px;
   margin: auto;
   border-radius: 25px;
-  transition: 0.3s;
-  
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 7.75%;
+  height: 1.5rem;
 }
-
+button:hover {
+  background-color: var(--sandal);
+              }
+input:hover {
+  background-color: var(--sandal);
+              }
+#langbutton-en:hover {
+  background-color: var(--sandal);
+              }
+#langbutton-fr:hover {
+  background-color: var(--sandal);
+              }
 #langbutton-fr{
   background-color: var(--grey);
   border: none;
@@ -142,12 +156,6 @@ input{
     border-radius: 5px;
     left: 15vw;
 }
-button{
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: 7.75%;
-    height: 1.5rem;
-}
 
 a:link {
   color: var(--walnut);
@@ -171,4 +179,3 @@ a:active {
   color:var(--walnut);
   background-color: transparent;
 }
-
