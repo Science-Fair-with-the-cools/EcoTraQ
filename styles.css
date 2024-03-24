@@ -1,55 +1,61 @@
 /* Colour Palette  - changed the colours a bit for better reading/look*/
 :root {
-    --kaitoke-green: #003e29;
-    --como: #d5e7b8;
-    --sandal: #845710;
-    --walnut: #633e31;
-    --grey: #8da290;
-    }
+  --kaitoke-green: #003e29;
+  --como: #d5e7b8;
+  --sandal: #845710;
+  --walnut: #633e31;
+  --grey: #8da290;
+}
 
 /* Styles: */
 
-html{
-    scroll-behavior: smooth;
-}
-body{
-    text-align: center;
-    background-color: var(--como);
-    color: var(--sandal);
-}
-h1,h2,h3{
-    color: var(--walnut);
-}
-#header{
-    display: flex;
-    position: sticky;
-    margin: 0;
-    padding: 10px;
-    top: 0%;
-    right: 0%;
-    left: 0%;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: var(--grey);
-    z-index: 5;
+html {
+  scroll-behavior: smooth;
 }
 
-#langbutton-en{
-    background-color: var(--grey);
-    border: none;
-    color: var(--kaitoke-green);
-    font-size: 11px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 25px;
-    transition: 0.3s;
+body {
+  text-align: center;
+  background-color: var(--como);
+  color: var(--sandal);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--walnut);
+}
+
+#header {
+  display: flex;
+  position: sticky;
+  margin: 0;
+  padding: 10px;
+  top: 0%;
+  right: 0%;
+  left: 0%;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--grey);
+  z-index: 5;
+}
+
+#langbutton-en {
+  background-color: var(--grey);
+  border: none;
+  color: var(--kaitoke-green);
+  font-size: 11px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 25px;
+  transition: 0.3s;
 
 
 }
 
-button,input{
+button,
+input {
   background-color: var(--grey);
   border: none;
   color: var(--kaitoke-green);
@@ -64,19 +70,24 @@ button,input{
   width: 7.75%;
   height: 1.5rem;
 }
+
 button:hover {
   background-color: var(--sandal);
-              }
+}
+
 input:hover {
   background-color: var(--sandal);
-              }
+}
+
 #langbutton-en:hover {
   background-color: var(--sandal);
-              }
+}
+
 #langbutton-fr:hover {
   background-color: var(--sandal);
-              }
-#langbutton-fr{
+}
+
+#langbutton-fr {
   background-color: var(--grey);
   border: none;
   color: var(--kaitoke-green);
@@ -90,71 +101,104 @@ input:hover {
 
 }
 
-footer{
-    position: relative;
-    bottom: 0;
+footer {
+  position: relative;
+  bottom: 0;
 }
-.sites{
-    color: var(--walnut);
+
+.sites {
+  color: var(--walnut);
 }
-#form{
-    position: relative;
-    display: flex;
-    flex-direction: column;
+
+.question {
+  margin-bottom: 5px;
+  text-align: center; /* Align text inside the question div to the left */
 }
-#questions{
-    display: flex;
-    background-color: var(--grey);
-    border-radius: 7px;
-    width: 80%;
-    height: 30rem;
-    align-self: center;
+
+.question p {
+  margin-bottom: 5px; /* Add some space below each question */
 }
+
+.question input[type="checkbox"],
+.question input[type="radio"],
+.question select {
+  vertical-align: middle; /* Align checkboxes, radios, and selects vertically */
+  margin-left: 10px; /* Add some space between the label and the input */
+}
+
+.question label,
+.question select {
+  display: inline-block; /* Display labels and selects inline */
+}
+
+
+#form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#questions {
+  display: flex;
+  background-color: var(--grey);
+  border-radius: 7px;
+  width: 80%;
+  height: 55rem;
+  align-self: center;
+}
+
 fieldset {
-    border: none;
-    margin: 0;
-    padding: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 fieldset label {
-    display: block;
-    margin-bottom: 10px; /* Add space between each question */
-    margin-left: 10px;
+  display: block;
+  margin-bottom: 10px;
+  /* Add space between each question */
+  margin-left: 10px;
 
 }
 
 fieldset label input,
 fieldset label select {
-    margin-right: 5px; /* Add space between the input/select and the label text */
+  margin-right: 5px;
+  /* Add space between the input/select and the label text */
 
 }
 
 #questions {
-    display: flex;
-    flex-direction: column; /* Change to column layout */
-    background-color: var(--grey);
-    border-radius: 7px;
-    width: 80%;
-    max-width: 600px; /* Limit the maximum width for better readability */
-    margin: 0 auto; /* Center the questions */
-    padding: 20px; /* Add some padding for better appearance */
+  display: flex;
+  flex-direction: column;
+  /* Change to column layout */
+  background-color: var(--grey);
+  border-radius: 7px;
+  width: 80%;
+  max-width: 600px;
+  /* Limit the maximum width for better readability */
+  margin: 0 auto;
+  /* Center the questions */
+  padding: 20px;
+  /* Add some padding for better appearance */
 }
 
-#projectdesc{
-    left: 25%;
-    right: 25%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    align-items: center;
+#projectdesc {
+  left: 25%;
+  right: 25%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
 }
-input{
-    position: relative;
-    width: 8.75%;
-    height: 1.7rem;
-    border-radius: 5px;
-    left: 15vw;
+
+input {
+  position: relative;
+  width: 8.75%;
+  height: 1.7rem;
+  border-radius: 5px;
+  left: 15vw;
 }
 
 a:link {
@@ -176,6 +220,6 @@ a:hover {
 }
 
 a:active {
-  color:var(--walnut);
+  color: var(--walnut);
   background-color: transparent;
 }
