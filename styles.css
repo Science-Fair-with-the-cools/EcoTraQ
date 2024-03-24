@@ -2,7 +2,7 @@
 :root {
   --kaitoke-green: #003e29;
   --como: #d5e7b8;
-  --sandal: #845710;
+  --sandal: #885607;
   --walnut: #633e31;
   --grey: #8da290;
 }
@@ -46,12 +46,12 @@ h3 {
   font-size: 11px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  padding: 5px;
+  padding: 7px;
   margin: 5px;
   border-radius: 25px;
   transition: 0.3s;
   position: fixed;
-  right: 0%;
+  right: 6%;
   top: 7%;
 }
 
@@ -97,14 +97,13 @@ input:hover {
   font-size: 11px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  padding: 5px;
+  padding: 7px;
   margin: 5px;
   border-radius: 25px;
   transition: 0.3s;
   position: fixed;
-  right: 7%;
+  right: 0%;
   top: 7%;
-}
 
 footer {
   position: relative;
@@ -135,17 +134,7 @@ footer {
 .question select {
   display: inline-block; /* Display labels and selects inline */
 }
-select,option{
-  background-color: var(--como);
-  border: none;
-  color: var(--kaitoke-green);
-  font-size: 12px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  padding: 1px;
-  margin: auto;
-  border-radius: 25px;
-}
+
 
 #form {
   position: relative;
@@ -158,29 +147,8 @@ select,option{
   background-color: var(--grey);
   border-radius: 7px;
   width: 80%;
-  height: auto;
+  height: 55rem;
   align-self: center;
-}
-
-fieldset {
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-
-fieldset label {
-  display: block;
-  margin-bottom: 10px;
-  /* Add space between each question */
-  margin-left: 10px;
-
-}
-
-fieldset label input,
-fieldset label select {
-  margin-right: 5px;
-  /* Add space between the input/select and the label text */
-
 }
 
 #questions {
@@ -206,7 +174,6 @@ fieldset label select {
   flex-direction: column;
   width: 50%;
   align-items: center;
-  padding-top: 1.5rem;
 }
 
 input {
