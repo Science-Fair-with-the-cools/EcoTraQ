@@ -183,6 +183,7 @@ footer {
   flex-direction: column;
   width: 50%;
   align-items: center;
+  padding-top: 1.5rem;
 }
 
 input {
