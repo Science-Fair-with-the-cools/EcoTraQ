@@ -176,6 +176,7 @@ footer {
 }
 
 #projectdesc {
+  padding-top: 1.5rem;
   left: 25%;
   right: 25%;
   position: relative;
@@ -183,7 +184,6 @@ footer {
   flex-direction: column;
   width: 50%;
   align-items: center;
-  padding-top: 1.5rem;
 }
 
 input {
