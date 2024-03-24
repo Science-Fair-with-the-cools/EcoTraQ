@@ -40,7 +40,7 @@ h3 {
 }
 
 #langbutton-en {
-  background-color: #449ff0;
+  background-color: #449ff00;
   border: none;
   color: var(--kaitoke-green);
   font-size: 11px;
@@ -90,7 +90,7 @@ input:hover {
 }
 
 #langbutton-fr {
-  background-color: #449ff0;
+  background-color: #449ff00;
   border: none;
   color: var(--kaitoke-green);
   font-size: 11px;
@@ -213,7 +213,7 @@ input {
   width: 8.75%;
   height: 1.7rem;
   border-radius: 5px;
-  left: -35vw;
+  left: -15vw;
 }
 
 a:link {
