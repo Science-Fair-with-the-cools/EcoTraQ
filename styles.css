@@ -51,7 +51,7 @@ h3 {
   border-radius: 25px;
   transition: 0.3s;
   position: fixed;
-  right: 6%;
+  right: 8%;
   top: 7%;
 }
 select,option{
@@ -64,8 +64,6 @@ select,option{
   padding: 1px;
   margin: auto;
   border-radius: 25px;
-}
-
 }
 
 button,
@@ -115,6 +113,8 @@ input:hover {
   position: fixed;
   right: 0%;
   top: 7%;
+
+}
 
 footer {
   position: relative;
