@@ -42,7 +42,7 @@ function switchLanguage(lang) {
   document.getElementById('questionnaire').textContent = translations[lang].questionnaire;
 document.getElementById('about').textContent = translations[lang].about;
   document.getElementById('credits2').textContent = translations[lang].credits2;
-  
+
 document.getElementById('credits1').textContent = translations[lang].credits1;
   document.getElementById('footerbtn').textContent = translations[lang].footerbtn;
   document.getElementById('topbtn').textContent = translations[lang].topbtn;
@@ -52,7 +52,7 @@ document.getElementById('credits1').textContent = translations[lang].credits1;
   // code below not working cause submit button is programmed as an input not a button idk
 
 // document.getElementsById('submit').textContent = translations[lang].submit;
-  
+
 }
 
 
