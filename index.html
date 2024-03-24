@@ -1,186 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="title">EcoTraQ (Carbon footprint calculator)</title>
-    <link rel="icon" type="image/x-icon" href="https://www.iconpacks.net/icons/2/free-tree-icon-1578-thumb.png">
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="title">EcoTraQ (Carbon footprint calculator)</title>
+  <link rel="icon" type="image/x-icon" href="https://www.iconpacks.net/icons/2/free-tree-icon-1578-thumb.png">
 </head>
+
 <body>
   <!-- language buttons -->
-    <button onclick="switchLanguage('en')" id="langbutton-en">English</button>
-    <button onclick="switchLanguage('fr')" id="langbutton-fr">French</button>
+  <button onclick="switchLanguage('en')" id="langbutton-en">English</button>
+  <button onclick="switchLanguage('fr')" id="langbutton-fr">French</button>
 
-    <main>
-        <!-- Header to access different parts of the site -->
-      <div id="header">
-        <div class="sites" id="header1">
-      <a href="google.com">Personal TraQ
-      </a>
+  <main>
+    <!-- Header to access different parts of the site -->
+    <div id="header">
+      <div class="sites" id="header1">
+        <a href="google.com">Personal TraQ
+        </a>
 
-        </div>
+      </div>
 
-        <div class="sites" id="header2">
-          <a href="google.com">Site TraQ
-          </a>
+      <div class="sites" id="header2">
+        <a href="google.com">Site TraQ
+        </a>
 
+      </div>
+    </div>
+    <!-- Brief desc of project -->
+    <div id="projectdesc">
+      <h2>Our Mission:</h2>
+
+      <p>People live their everyday lives oblivious to the fact that every decision they make may alter their impact on
+        our environment. It is our job to ensure our community is aware of how they could reduce, manage, and alter
+        either positively or negatively their carbon footprint. We created a Carbon Footprint Calculator (EcoTraQ),
+        using various coding languages (Hyper Text Markup Language, Cascading Style Sheets, Javascript). Our work is
+        hosted on a website via GitHub, which displays a questionnaire, once filled out the user can see their results
+        alongside average results among Canadians. Lastly, we demonstrate how users can reduce and manage their carbon
+        footprint using easy-to-follow steps catered towards each individual's results.</p>
+    </div>
+
+    <!-- Questionnaire section -->
+    <div id="form">
+      <h2 id="questionnaire">Questionnaire:</h2>
+      <div id="questions">
+        <form id="carbonForm">
+          <div class="question"><strong>Travel</strong>
+            <p><strong>1.</strong> How do you typically commute to school or work?</p>
+            <select name="commute">
+              <option value="Car">Car</option>
+              <option value="Public Bus">Public Bus</option>
+              <option value="Bike">Bike</option>
+              <option value="Walking">Walking</option>
+            </select>
+          </div>
+
+          <div class="question">
+            <p><strong>2.</strong> How often do you take flights for leisure or business?</p>
+            <select name="flights">
+              <option value="multiple_times">Multiple times a year</option>
+              <option value="once">Once a year</option>
+              <option value="rarely">Rarely or never</option>
+            </select>
+          </div>
+          
+          <div class="question"><br><strong>Home</strong>
+            <p><strong>3.</strong> How do you typically heat your home?</p>
+            <select name="heating">
+              <option value="gas">Gas</option>
+              <option value="electricity">Electricity</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="question">
+            <p><strong>4.</strong> How many people live in your household?</p>
+            <select name="household_size">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3_4">3-4</option>
+              <option value="5_or_more">5 or more</option>
+            </select>
+          </div>
+          
+          <div class="question">
+            <p><strong>5.</strong> Do you use any of the following? Dryer, washer, dishwasher, or refridgerator</p>
+            <select name="appliances">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option> 
+              <option value="All">All</option> 
+            </select>
+          </div>
+
+          <div class="question">
+            <p><strong>6.</strong> How well insulated is your home?</p>
+            <select name="insulation">
+              <option value="poor">Poor</option>
+              <option value="average">Average</option>
+              <option value="excellent">Excellent</option>
+            </select>
+          </div>
+          
+          <div class="question"><br><strong>Food</strong>
+            <p><strong>7.</strong> What best describes your diet?</p>
+            <select name="diet">
+              <option value="vegan">Vegan</option>
+              <option value="vegetarian">Vegetarian</option>
+              <option value="omnivore">Omnivore</option>
+            </select>
+          </div>
+          
+          <div class="question">
+            <p><strong>8.</strong> How often do you consume meat or dairy products?</p>
+            <select name="meat_consumption">
+              <option value="daily">Daily</option>
+              <option value="several_times">Several times a week</option>
+              <option value="rarely_never">Rarely or never</option>
+            </select>
+          </div>
+          
+          <div class="question"><br><strong>Habits</strong>
+            <p><strong>9.</strong> How often do you take shorter showers or use less water?</p>
+            <select name="water_usage">
+              <option value="always">Always</option>
+              <option value="sometimes">Sometimes</option>
+              <option value="rarely">Rarely</option>
+            </select>
+          </div>
+          
+          <div class="question">
+            <p><strong>10.</strong> How often do you buy locally-produced goods?</p>
+            <select name="local_goods">
+              <option value="always">Always</option>
+              <option value="sometimes">Sometimes</option>
+              <option value="rarely">Rarely</option>
+            </select>
+          </div>
+          
+          <div class="question">
+            <p><strong>11.</strong> How often do you recycle?</p>
+            <select name="recycling">
+              <option value="always">Always</option>
+              <option value="sometimes">Sometimes</option>
+              <option value="rarely">Rarely</option>
+            </select>
+          </div>
+          
+          <div class="question">
+            <p><strong>12.</strong> How often do you leave lights or appliances on when not in use?</p>
+            <select name="electricity_usage">
+              <option value="always">Always</option>
+              <option value="sometimes">Sometimes</option>
+              <option value="rarely">Rarely</option>
+            </select>
+          </div>
+
+
+
+      </div>
+      </form>
+      <div id="result"></div>
+    </div>
+    <br>
+    <input id="submit" type="submit">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <h2 id="about">About:</h2>
+      <p id="credits1">Created by: Cameron Lemoine and Hasan Ahmed</p>
+      <p id="credits2"> With help from: Will Reavie and Aaron Chung</p>
+      <p>
+        <a href="https://github.com/Science-Fair-with-the-cools/EcoTraQ" id=github>GitHub Repository</a>
+      <div>
+        <a href="google.com" id="pbpage">ProjectBoard Page</a>
+        <div>
+          <br>
+          <a href="google.com">Sources</a>
         </div>
       </div>
-        <!-- Brief desc of project -->
-        <div id="projectdesc">
-            <h2>Our Mission:</h2>
-          
-            <p>People live their everyday lives oblivious to the fact that every decision they make may alter their impact on our environment. It is our job to ensure our community is aware of how they could reduce, manage, and alter either positively or negatively their carbon footprint. We created a Carbon Footprint Calculator (EcoTraQ), using various coding languages (Hyper Text Markup Language, Cascading Style Sheets, Javascript). Our work is hosted on a website via GitHub, which displays a questionnaire, once filled out the user can see their results alongside average results among Canadians. Lastly, we demonstrate how users can reduce and manage their    carbon footprint using easy-to-follow steps catered towards each individual's results.</p>
-        </div>
+      </p>
+      <div class="buttons">
+        <button id="topbtn" onclick="backToTop()">Back to top</button>
 
-        <!-- Questionnaire section -->
-        <div id="form">
-            <h2 id="questionnaire">Questionnaire:</h2>
-            <div id="questions">
-              <form id="carbonForm">
-              <div class="question">
-                  <p><strong>Question 1:</strong> How do you typically commute to school or work?</p>
-                  <select name="commute">
-                      <option value="Car">Car</option>
-                    <option value="Public Bus">Public Bus</option>
-                      <option value="Bike">Bike</option>
-                      <option value="Walking">Walking</option>
-                  </select>
-              </div>
 
-              <div class="question">
-                  <p><strong>Question 2:</strong> How do you typically heat your home?</p>
-                  <select name="heating">
-                      <option value="gas">Gas</option>
-                      <option value="electricity">Electricity</option>
-                      <option value="other">Other</option>
-                  </select>
-              </div>
+      </div>
+    </footer>
+  </main>
 
-              <div class="question">
-                  <p><strong>Question 3:</strong> Do you use energy-efficient appliances at home?</p>
-                  <select name="appliances">
-                      <option value="yes">Yes</option>
-                      <option value="No">No</option>
-                  </select>
-              </div>
-
-              <div class="question">
-                  <p><strong>Question 4:</strong> How often do you recycle?</p>
-                  <select name="recycling">
-                      <option value="always">Always</option>
-                      <option value="sometimes">Sometimes</option>
-                      <option value="rarely">Rarely</option>
-                  </select>
-              </div>
-
-              <div class="question">
-                  <p><strong>Question 5:</strong> What best describes your diet?</p>
-                  <select name="diet">
-                      <option value="vegan">Vegan</option>
-                      <option value="vegetarian">Vegetarian</option>
-                      <option value="omnivore">Omnivore</option>
-                  </select>
-              </div>
-
-              <div class="question">
-                  <p><strong>Question 6:</strong> How often do you take shorter showers or use less water?</p>
-                  <select name="water_usage">
-                      <option value="always">Always</option>
-                      <option value="sometimes">Sometimes</option>
-                      <option value="rarely">Rarely</option>
-                  </select>
-              </div>
-
-              <div class="question">
-                  <p><strong>Question 7:</strong> How often do you buy locally-produced goods?</p>
-                  <select name="local_goods">
-                      <option value="always">Always</option>
-                      <option value="sometimes">Sometimes</option>
-                      <option value="rarely">Rarely</option>
-                  </select>
-              </div>
-
-              <div class="question">
-                  <p><strong>Question 8:</strong> How often do you take flights for leisure or business?</p>
-                  <select name="flights">
-                      <option value="multiple_times">Multiple times a year</option>
-                      <option value="once">Once a year</option>
-                      <option value="rarely">Rarely or never</option>
-                  </select>
-              </div>
-
-              <div class="question">
-                  <p><strong>Question 9:</strong> How many people live in your household?</p>
-                  <select name="household_size">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3_4">3-4</option>
-                      <option value="5_or_more">5 or more</option>
-                  </select>
-              </div>
-
-              <div class="question">
-                  <p><strong>Question 10:</strong> How well insulated is your home?</p>
-                  <select name="insulation">
-                      <option value="poor">Poor</option>
-                      <option value="average">Average</option>
-                      <option value="excellent">Excellent</option>
-                  </select>
-              </div>
-
-              <div class="question">
-                  <p><strong>Question 11:</strong> How often do you consume meat or dairy products?</p>
-                  <select name="meat_consumption">
-                      <option value="daily">Daily</option>
-                      <option value="several_times">Several times a week</option>
-                      <option value="rarely_never">Rarely or never</option>
-                  </select>
-              </div>
-
-              <div class="question">
-                  <p><strong>Question 12:</strong> How often do you leave lights or appliances on when not in use?</p>
-                  <select name="electricity_usage">
-                      <option value="always">Always</option>
-                      <option value="sometimes">Sometimes</option>
-                      <option value="rarely">Rarely</option>
-                  </select>
-              </div>
-
-            
-               
-                </div>
-              </form>
-          <div id="result"></div>
-            </div>
-          <br>
-            <input id="submit" type="submit">
-        </div>
-
-        <!-- Footer -->
-        <footer>
-            <h2 id="about">About:</h2>
-            <p id="credits1">Created by:  Cameron Lemoine and Hasan Ahmed</p>
-            <p id="credits2"> With help from: Will Reavie and Aaron Chung</p>
-          <p> 
-             <a href="https://github.com/Science-Fair-with-the-cools/EcoTraQ" id=github>GitHub Repository</a> 
-              <div>
-              <a href="google.com" id="pbpage">ProjectBoard Page</a>
-                <div> 
-                  <br>
-                <a href="google.com">Sources</a>
-                  </div>
-                </div>
-              </p>
-            <div class="buttons">
-                <button id="topbtn" onclick="backToTop()">Back to top</button>
-                
-              
-            </div>
-        </footer>
-    </main>
-
-    <script src="scripts.js"></script>
+  <script src="scripts.js"></script>
 </body>
+
 </html>
