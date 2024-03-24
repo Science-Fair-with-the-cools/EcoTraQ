@@ -54,6 +54,17 @@ h3 {
   right: 6%;
   top: 7%;
 }
+select,option{
+  background-color: var(--como);
+  border: none;
+  color: var(--kaitoke-green);
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  padding: 1px;
+  margin: auto;
+  border-radius: 25px;
+}
 
 }
 
