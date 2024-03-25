@@ -69,42 +69,54 @@ document.getElementById("carbonForm").addEventListener("submit", function(event)
   event.preventDefault();
   // Define emission values for each option
   const emissions = {
+    //q1
     "Car": 6, 
     "Public Bus": 2,
     "Bike": 1,
     "Walking": 5,
+    //q2
     "multiple_times": 7,
     "once": 7,
     "rarely": 7,
+      //q3
     "gas": 7,
     "electricity": 7,
     "other": 7,
+    //q4
     "1":7,
     "2":8,
     "3-4":6,
     "5_or_more":3,
+    //q5
     "One":4,
     "Two":1,
     "Three":8,
     "All":7,
+    //q6
     "poor":6,
     "average":4,
-    "Excellent":4,
+    "excellent":4,
+    //q7
     "vegan":4,
     "vegetarian":4,
     "omnivore":2,
+    //q8
     "daily":4,
     "several_times":2,
     "rarely_never":9,
-    "always":8,
-    "sometimes":2,
-    "rarely":3,
+    //q9
+    "always0":8,
+    "sometimes0":2,
+    "rarely0":3,
+    //q10
     "always1":9,
     "sometimes1":0,
     "rarely1":8,
+    //q11
     "always2":7,
     "sometimes2":6,
     "rarely2":1,
+    //q12
     "always3":4,
     "sometimes3":3,
     "rarely3":2,
