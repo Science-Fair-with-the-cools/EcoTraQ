@@ -44,16 +44,16 @@ h3 {
   background-color: #93d293;
   border: none;
   color: var(--kaitoke-green);
-  font-size: 11px;
+  font-size: 11px;  
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   padding: 7px;
   margin: 5px;
   border-radius: 25px;
   transition: 0.3s;
-  position: fixed;
+  position: absolute;
   right: 8%;
-  top: 6%;
+  top: 7%;
 }
 
 select,
@@ -113,9 +113,9 @@ input:hover {
   margin: 5px;
   border-radius: 25px;
   transition: 0.3s;
-  position: fixed;
+  position: absolute;
   right: 0%;
-  top: 6%;
+  top: 7%;
 
 }
 
