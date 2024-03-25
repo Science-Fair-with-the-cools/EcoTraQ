@@ -3,8 +3,6 @@
 const translations = {
   en: {
     title: "EcoTraQ (Carbon footprint calculator)",
-    header1: "Personal TraQ",
-    header2: "Site TraQ",
     questionnaire: "Questionnaire",
     about: "About",
     credits1: "Created by:  Cameron Lemoine and Hasan Ahmed",
@@ -18,8 +16,6 @@ const translations = {
   },
   fr: {
     title: "EcoTraQ (Calculatrice d'Impact du Carbone)",
-    header1: "TraQ personnel",
-    header2: "TraQ des Sites",
     questionnaire: "Quiz",
     about: "Crédits",
     credits1: "Créé par: Cameron Lemoine et Hasan Ahmed",
@@ -37,8 +33,6 @@ const translations = {
 function switchLanguage(lang) {
   document.getElementById('title').textContent = translations[lang].title;
   document.getElementById('projectdesc').textContent = translations[lang].projectdesc;
-  document.getElementById('header1').textContent = translations[lang].header1;
-  document.getElementById('header2').textContent = translations[lang].header2;
   document.getElementById('questionnaire').textContent = translations[lang].questionnaire;
   document.getElementById('about').textContent = translations[lang].about;
   document.getElementById('credits2').textContent = translations[lang].credits2;
