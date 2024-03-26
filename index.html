@@ -47,8 +47,10 @@
         <form id="carbonForm">
           <div class="question"><strong>Transport</strong>
             <p><strong>1.</strong> How do you typically commute to school or work?</p>
-            <select name="commute">
+            <select name="commute" required>
+              <option value="">(select one)</option>
               <option value="Car">Car</option>
+              <option value="EV">Electric Vehicle</option>
               <option value="Public Bus">Public Bus</option>
               <option value="Bike">Bike</option>
               <option value="Walking">Walking</option>
@@ -56,8 +58,19 @@
           </div>
 
           <div class="question">
-            <p><strong>2.</strong> How often do you take flights for leisure or business?</p>
-            <select name="flights">
+            <p><strong>2.</strong><em> If you answered car or bus</em> - How long does it take you to commute to work/school</p>
+            <select name="commute_time">
+              <option value="">N/A</option>
+              <option value="15">15 minutes or less</option>
+              <option value="30">30 minutes or less</option>
+              <option value="60">1 hour or more </option>
+            </select>
+          </div>
+
+          <div class="question">
+            <p><strong>3.</strong> How often do you take flights for leisure or business?</p>
+            <select name="flights" required>
+              <option value="">(select one)</option>
               <option value="multiple_times">Multiple times a year</option>
               <option value="once">Once a year</option>
               <option value="rarely">Rarely or never</option>
@@ -65,8 +78,9 @@
           </div>
 
           <div class="question"><br><strong>Home</strong>
-            <p><strong>3.</strong> How do you typically heat your home?</p>
-            <select name="heating">
+            <p><strong>4.</strong> How do you heat your home?</p>
+            <select name="heating" required>
+              <option value="">(select one)</option>
               <option value="gas">Gas</option>
               <option value="electricity">Electricity</option>
               <option value="other">Other</option>
@@ -74,8 +88,9 @@
           </div>
 
           <div class="question">
-            <p><strong>4.</strong> How many people live in your household?</p>
-            <select name="household_size">
+            <p><strong>5.</strong> How many people live in your household?</p>
+            <select name="household_size" required>
+              <option value="">(select one)</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3_4">3-4</option>
@@ -84,8 +99,9 @@
           </div>
 
           <div class="question">
-            <p><strong>5.</strong> Do you use any of the following? Dryer, washer, dishwasher, or refridgerator</p>
-            <select name="appliances">
+            <p><strong>6.</strong> Do you use any of the following? Dryer, washer, dishwasher, or refridgerator</p>
+            <select name="appliances" required>
+              <option value="">(select one)</option>
               <option value="One">1</option>
               <option value="Two">2</option>
               <option value="Three">3</option>
@@ -93,18 +109,12 @@
             </select>
           </div>
 
-          <div class="question">
-            <p><strong>6.</strong> How well insulated is your home?</p>
-            <select name="insulation">
-              <option value="poor">Poor</option>
-              <option value="average">Average</option>
-              <option value="excellent">Excellent</option>
-            </select>
-          </div>
+          
 
           <div class="question"><br><strong>Food</strong>
             <p><strong>7.</strong> What best describes your diet?</p>
-            <select name="diet">
+            <select name="diet" required>
+              <option value="">(select one)</option>
               <option value="vegan">Vegan</option>
               <option value="vegetarian">Vegetarian</option>
               <option value="omnivore">Omnivore</option>
@@ -113,7 +123,8 @@
 
           <div class="question">
             <p><strong>8.</strong> How often do you consume meat or dairy products?</p>
-            <select name="meat_consumption">
+            <select name="meat_consumption" required>
+              <option value="">(select one)</option>
               <option value="daily">Daily</option>
               <option value="several_times">Several times a week</option>
               <option value="rarely_never">Rarely or never</option>
@@ -122,7 +133,8 @@
 
           <div class="question"><br><strong>Habits</strong>
             <p><strong>9.</strong> How often do you take shorter showers or use less water?</p>
-            <select name="water_usage">
+            <select name="water_usage" required>
+              <option value="">(select one)</option>
               <option value="always0">Always</option>
               <option value="sometimes0">Sometimes</option>
               <option value="rarely0">Rarely</option>
@@ -130,8 +142,9 @@
           </div>
 
           <div class="question">
-            <p><strong>10.</strong> How often do you buy locally-produced goods?</p>
-            <select name="local_goods">
+            <p><strong>10.</strong>Do you buy locally-produced goods?</p>
+            <select name="local_goods" required>
+              <option value="">(select one)</option>
               <option value="always1">Always</option>
               <option value="sometimes1">Sometimes</option>
               <option value="rarely1">Rarely</option>
@@ -139,8 +152,9 @@
           </div>
 
           <div class="question">
-            <p><strong>11.</strong> How often do you recycle?</p>
-            <select name="recycling">
+            <p><strong>11.</strong>Do you recycle?</p>
+            <select name="recycling" required>
+              <option value="">(select one)</option>
               <option value="always2">Always</option>
               <option value="sometimes2">Sometimes</option>
               <option value="rarely2">Rarely</option>
@@ -149,7 +163,8 @@
 
           <div class="question">
             <p><strong>12.</strong> How often do you leave lights or appliances on when not in use?</p>
-            <select name="electricity_usage">
+            <select name="electricity_usage" required>
+              <option value="">(select one)</option>
               <option value="always3">Always</option>
               <option value="sometimes3">Sometimes</option>
               <option value="rarely3">Rarely</option>
@@ -159,6 +174,7 @@
 
 
       </div>
+      <br>
       <div id="result"></div>
       <br>
       <input id="submit" type="submit">
