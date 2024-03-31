@@ -197,6 +197,7 @@ input[type="submit"] {
 input[type="number"] {
   position: relative;
   background-color: var(--como);
+  color: var(--kaitoke-green);
   width: 20%;
   height: 1.7rem;
   border-radius: 5px;
