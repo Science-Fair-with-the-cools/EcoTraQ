@@ -70,7 +70,7 @@ option {
 }
 
 button,
-input {
+input[type="submit"] {
   background-color: var(--grey);
   border: none;
   color: var(--kaitoke-green);
@@ -186,12 +186,19 @@ footer {
   align-items: center;
 }
 
-input {
+input[type="submit"] {
   position: relative;
   width: 8.75%;
   height: 1.7rem;
   border-radius: 5px;
   left: 15vw;
+}
+
+input[type="number"] {
+  position: relative;
+  width: 13%;
+  height: 1.7rem;
+  border-radius: 5px;
 }
 
 a:link {
