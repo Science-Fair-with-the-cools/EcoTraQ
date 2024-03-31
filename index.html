@@ -85,6 +85,17 @@
           </div>
 
           <div class="question"><br><strong id="home">Home</strong>
+            <p id="heating"><strong>4.</strong>What type of housing do you reside in?</p>
+            <select name="housing" required>
+              <option id="select4" value="">(select one)</option>
+              <option value="town">Town house</option>
+              <option value="single">Single home</option>
+              <option value="apartment">Apartment</option>
+              <option value="mobile">Mobile home</option>
+            </select>
+          </div>
+
+          <div class="question">
             <p id="heating"><strong>4.</strong> How do you heat your home?</p>
             <select name="heating" required>
               <option id="select3" value="">(select one)</option>
@@ -136,16 +147,6 @@
           </div>
 
           <div class="question">
-            <p id="local_goods"><strong>10.</strong>Do you buy locally-produced goods?</p>
-            <select name="local_goods" required>
-              <option id="select9" value="">(select one)</option>
-              <option value="always1">Always</option>
-              <option value="sometimes1">Sometimes</option>
-              <option value="rarely1">Rarely</option>
-            </select>
-          </div>
-
-          <div class="question">
             <p id="recycling"><strong>11.</strong>Do you recycle?</p>
             <select name="recycling" required>
               <option id="select10" value="">(select one)</option>
@@ -156,12 +157,13 @@
           </div>
 
           <div class="question">
-            <p id="electricity_usage"><strong>12.</strong> How often do you leave lights on when not in use?</p>
+            <p id="electricity_usage"><strong>12.</strong>How many hours a day are your lights on? (estimate)</p>
             <select name="electricity_usage" required>
               <option value="" id="select11" >(select one)</option>
-              <option value="always3">Always</option>
-              <option value="sometimes3">Sometimes</option>
-              <option value="rarely3">Rarely</option>
+              <option value="always3">20 hours or more</option>
+              <option value="sometimes3">12 hours or more</option>
+              <option value="rarely3">6 hours or more</option>
+              <option value="idk4">less than 6 hours</option>
             </select>
           </div>
 
