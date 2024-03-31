@@ -90,7 +90,7 @@ button:hover {
   background-color: var(--sandal);
 }
 
-input:hover {
+input[type="submit"]:hover {
   background-color: var(--sandal);
 }
 
@@ -157,7 +157,7 @@ footer {
   background-color: var(--grey);
   border-radius: 7px;
   width: 80%;
-  height: 55rem;
+  height: 62rem;
 }
 
 #questions {
@@ -196,7 +196,8 @@ input[type="submit"] {
 
 input[type="number"] {
   position: relative;
-  width: 13%;
+  background-color: var(--como);
+  width: 20%;
   height: 1.7rem;
   border-radius: 5px;
 }
