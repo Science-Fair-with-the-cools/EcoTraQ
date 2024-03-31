@@ -37,7 +37,7 @@ const translations = {
     local_goods: "Do you buy locally-produced goods?",
     recycling: "Do you recycle?",
     electricity_usage: "How often do you leave lights or appliances on when not in use?",
-    // submit: "Submit",
+    submit: "Submit",
     projectdesc: "People live their everyday lives oblivious that every decision they make alters their impact on our environment. EcoTraQ is a carbon footprint calculator that helps people understand and reduce their environmental impact, it is a tool for tracking personal emissions and website carbon footprints. Users input their lifestyle choices or website links to see how much carbon they release. By comparing user’s results with the average emissions released per capita, we can better understand how to live a more efficient lifestyle. Our project aims to raise awareness for individuals to take action towards a more sustainable future."
   },
   fr: {
@@ -76,7 +76,7 @@ const translations = {
     local_goods: "Achètes-tu des produits locaux ?",
     recycling: "Est-ce que tu recycles ?",
     electricity_usage: "Combien de fois laissez-vous des lumières ou des appareils allumés lorsque vous ne les utilisez pas ?",
-    // submit:"Soumettre",
+    submit:"Soumettre",
     projectdesc: "Les gens vivent leur vie quotidienne sans se rendre compte que chaque décision qu'ils prennent modifie leur impact sur l'environnement. EcoTraQ est un calculateur d'empreinte carbone qui aide les gens à comprendre et à réduire leur impact sur l'environnement. C'est un outil qui permet de suivre les émissions personnelles et l'empreinte carbone des sites web. Les utilisateurs saisissent leurs choix de mode de vie ou les liens de leur site web pour connaître la quantité de carbone qu'ils émettent. En comparant les résultats des utilisateurs avec les émissions moyennes par habitant, nous pouvons mieux comprendre comment adopter un mode de vie plus efficace. Notre projet vise à sensibiliser les individus à agir en faveur d'un avenir plus durable."
   }
 };
@@ -110,9 +110,8 @@ function switchLanguage(lang) {
   document.getElementById('recycling').textContent = translations[lang].recycling;
   document.getElementById('electricity_usage').textContent = translations[lang].electricity_usage;
    document.getElementById('select1').textContent = translations[lang].select1;   document.getElementById('select2').textContent = translations[lang].select2;   document.getElementById('select3').textContent = translations[lang].select3;   document.getElementById('select4').textContent = translations[lang].select4;   document.getElementById('select5').textContent = translations[lang].select5;   document.getElementById('select6').textContent = translations[lang].select6;   document.getElementById('select7').textContent = translations[lang].select7;   document.getElementById('select8').textContent = translations[lang].select8;   document.getElementById('select9').textContent = translations[lang].select9;   document.getElementById('select10').textContent = translations[lang].select10;   document.getElementById('select11').textContent = translations[lang].select11;
-  // code below not working cause submit button is programmed as an input not a button idk
+  document.getElementById('submit').value = translations[lang].submit;
 
-  // document.getElementsById('submit').textContent = translations[lang].submit;
 
 }
 
