@@ -67,6 +67,7 @@ option {
   padding: 1px;
   margin: auto;
   border-radius: 25px;
+  box-shadow: 10px 10px 20px grey;
 }
 
 button,
@@ -88,18 +89,26 @@ input[type="submit"] {
 
 button:hover {
   background-color: var(--sandal);
+  box-shadow: 10px 10px 20px grey;
+  color: #d5e7b8;
 }
 
 input[type="submit"]:hover {
   background-color: var(--sandal);
+  box-shadow: 10px 10px 20px grey;
+  color: #d5e7b8;
 }
 
 #langbutton-en:hover {
   background-color: var(--sandal);
+  box-shadow: 10px 10px 20px grey;
+  color: #d5e7b8;
 }
 
 #langbutton-fr:hover {
   background-color: var(--sandal);
+  box-shadow: 10px 10px 20px grey;
+  color: #d5e7b8;
 }
 
 #langbutton-fr {
@@ -116,7 +125,6 @@ input[type="submit"]:hover {
   position: absolute;
   right: 0%;
   top: 7%;
-
 }
 
 footer {
@@ -173,6 +181,7 @@ footer {
   /* Center the questions */
   padding: 20px;
   /* Add some padding for better appearance */
+  
 }
 
 #projectdesc {
@@ -219,6 +228,7 @@ a:visited {
 a:hover {
   color: var(--sandal);
   background-color: transparent;
+  
 }
 
 a:active {
