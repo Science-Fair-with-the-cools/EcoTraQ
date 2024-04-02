@@ -100,18 +100,20 @@ function switchLanguage(lang) {
 
   document.getElementById('commute').textContent = translations[lang].commute;
    document.getElementById('select').textContent = translations[lang].select;
-  document.getElementById('commute_time').textContent = translations[lang].commute_time;
+ // document.getElementById('commute_time').textContent = translations[lang].commute_time;
   document.getElementById('flights').textContent = translations[lang].flights;
   document.getElementById('heating').textContent = translations[lang].heating;
-  document.getElementById('household_size').textContent = translations[lang].household_size;
+  //document.getElementById('household_size').textContent = translations[lang].household_size;
   document.getElementById('appliances').textContent = translations[lang].appliances;
   document.getElementById('diet').textContent = translations[lang].diet;
   document.getElementById('meat_consumption').textContent = translations[lang].meat_consumption;
   document.getElementById('water_usage').textContent = translations[lang].water_usage;
-  document.getElementById('local_goods').textContent = translations[lang].local_goods;
+  //document.getElementById('local_goods').textContent = translations[lang].local_goods;
   document.getElementById('recycling').textContent = translations[lang].recycling;
   document.getElementById('electricity_usage').textContent = translations[lang].electricity_usage;
-   document.getElementById('select1').textContent = translations[lang].select1;   document.getElementById('select2').textContent = translations[lang].select2;   document.getElementById('select3').textContent = translations[lang].select3;   document.getElementById('select4').textContent = translations[lang].select4;   document.getElementById('select5').textContent = translations[lang].select5;   document.getElementById('select6').textContent = translations[lang].select6;   document.getElementById('select7').textContent = translations[lang].select7;   document.getElementById('select8').textContent = translations[lang].select8;   document.getElementById('select9').textContent = translations[lang].select9;   document.getElementById('select10').textContent = translations[lang].select10;   document.getElementById('select11').textContent = translations[lang].select11;
+   document.getElementById('select').textContent = translations[lang].select;   
+  document.getElementById('select2').textContent = translations[lang].select2;   
+  document.getElementById('select3').textContent = translations[lang].select3;   //document.getElementById('select4').textContent = translations[lang].select4;   document.getElementById('select5').textContent = translations[lang].select5;   document.getElementById('select6').textContent = translations[lang].select6;   document.getElementById('select7').textContent = translations[lang].select7;   document.getElementById('select8').textContent = translations[lang].select8;   document.getElementById('select9').textContent = translations[lang].select9;   document.getElementById('select10').textContent = translations[lang].select10;   document.getElementById('select11').textContent = translations[lang].select11;
   document.getElementById('submit').value = translations[lang].submit;
   document.getElementById('pre_form').textContent = translations[lang].pre_form;
 
@@ -138,68 +140,91 @@ document.getElementById("carbonForm").addEventListener("submit", function(event)
   event.preventDefault();
   // Define emission values for each option
   const emissions = {
-    "": 0,
-    //q1
-    "Car": 6,
-    "EV": 1,
-    "Public Bus": 2,
-    "Bike": 1,
-    "Walking": 5,
-    //q2
-    "multiple_times": 7,
-    "once": 7,
-    "rarely": 7,
-    //q3
-    "gas": 7,
-    "electricity": 7,
-    "other": 7,
-    //q4
-    "1": 7,
-    "2": 8,
-    "3-4": 6,
-    "5_or_more": 3,
-    //q5
-    "One": 4,
-    "Two": 1,
-    "Three": 8,
-    "All": 7,
-    //q6
-    "15": 6,
-    "30": 4,
-    "60": 4,
-    //q7
-    "vegan": 4,
-    "vegetarian": 4,
-    "omnivore": 2,
-    //q8
-    "daily": 4,
-    "several_times": 2,
-    "rarely_never": 9,
-    //q9
-    "always0": 8,
-    "sometimes0": 2,
-    "rarely0": 3,
-    //q10
-    "always1": 9,
-    "sometimes1": 0,
-    "rarely1": 8,
-    //q11
-    "always2": 7,
-    "sometimes2": 6,
-    "rarely2": 1,
-    //q12
-    "always3": 4,
-    "sometimes3": 3,
-    "rarely3": 2,
-  };
-  let totalEmissions = 0;
-  // Retrieve selected options and sum up emissions
-  const formData = new FormData(this);
-  formData.forEach((value, key) => {
-    totalEmissions += emissions[value];
-  });
 
-  // Display result
-  const resultElement = document.getElementById("result");
-  resultElement.textContent = `Your estimated carbon footprint is ${totalEmissions} tons of CO2 per year.`;
-})
+// Function to handle form submission
+document.getElementById("carbonForm").addEventListener("submit", function(event) {
+  // Prevent the default form submission behavior
+  event.preventDefault();
+
+  // Define emission values for each section
+  const emissions = {
+    transportation: {
+      "Car": 3.3863,
+      "EV": 0,
+      "Public Bus": 1.25125,
+      "Bike": 0,
+      "Walking": 0,
+      //q2
+      "multiple_times": 1.008,
+      "once": 0.336,
+      "rarely": 0,
+    },
+    housing: {
+      "town": 6.08,
+      "single": 39.55,
+      "apartment": 10.33,
+      "mobile": 1.14,
+      //q
+      "Gas": 3.265,
+      "Elec": 3.311,
+      //q
+      "One": 0.1325,
+      "Two": 0.265,
+      "Three": 0.3975,
+      "All": 0.53,
+    },
+    diet: {
+      "vegan": 1.5,
+      "vegetarian": 1.7,
+      "omnivore": 2.5,
+      "Carnivore": 3.3,
+      "nobeef": 1.9,
+      //q
+      "several_times": 0.52811735,
+      "rarely_never": 0.110231,
+    },
+      Habits: {
+      "always0": 3.63,
+      "sometimes0": 1.8143694,
+      "rarely0": 0.9071847,
+        //q
+      "always2": 0,
+      "sometimes2": 0,
+      "rarely2": 0,
+        //q
+      "always3": 0.0346,
+      "sometimes3": 0.0174,
+      "rarely3": 0.0110231,
+      "idk4": 0.0087,
+    }
+  };
+
+  // Function to calculate total emissions for a section
+  function calculateSectionEmissions(sectionName) {
+    let sectionTotal = 0;
+    const formData = new FormData(document.getElementById("carbonForm"));
+    formData.forEach((value, key) => {
+      if (key.startsWith(sectionName)) {
+        sectionTotal += emissions[sectionName][value];
+      }
+    });
+    return sectionTotal;
+  }
+
+  // Function to handle form submission
+  document.getElementById("carbonForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Calculate total emissions for each section
+    const transportationTotal = calculateSectionEmissions("transportation");
+    const housingTotal = calculateSectionEmissions("housing");
+    const dietTotal = calculateSectionEmissions("diet");
+    const habitsTotal = calculateSectionEmissions("habits");
+
+    // Calculate total emissions
+    const totalEmissions = transportationTotal + housingTotal + dietTotal + habitsTotal;
+
+    // Display result
+    const resultElement = document.getElementById("result");
+    resultElement.textContent = `Your estimated total carbon footprint is ${totalEmissions} tons of CO2 per year.`;
+  });
