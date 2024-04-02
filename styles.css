@@ -26,19 +26,21 @@
     color: var(--walnut);
   }
   
-  #header {
-    display: flex;
-    position: sticky;
-    margin: 0;
-    padding: 10px;
-    top: 0%;
-    right: 0%;
-    left: 0%;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: var(--grey);
-    z-index: 5;
-  }
+ #header {
+  display: flex;
+  position: sticky;
+  margin: 0;
+  padding: 10px;
+  top: 0%;
+  right: 0%;
+  left: 0%;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #93d293;
+  z-index: 5;
+  border-radius: 21px;
+  box-shadow: 5px 5px 5px grey;
+}
   
   #langbutton-en {
     background-color: #93d293;
