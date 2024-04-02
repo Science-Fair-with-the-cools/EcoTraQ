@@ -1,237 +1,239 @@
 /* Colour Palette  - changed the colours a bit for better reading/look*/
 :root {
-  --kaitoke-green: #003e29;
-  --como: #d5e7b8;
-  --sandal: #885607;
-  --walnut: #633e31;
-  --grey: #8da290;
-}
-
-/* Styles: */
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  text-align: center;
-  background-color: var(--como);
-  color: var(--sandal);
-  font-family: 'Roboto', sans-serif;
-}
-
-h1,
-h2,
-h3 {
-  color: var(--walnut);
-}
-
-#header {
-  display: flex;
-  position: sticky;
-  margin: 0;
-  padding: 10px;
-  top: 0%;
-  right: 0%;
-  left: 0%;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: var(--grey);
-  z-index: 5;
-}
-
-#langbutton-en {
-  background-color: #93d293;
-  border: none;
-  color: var(--kaitoke-green);
-  font-size: 11px;  
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  padding: 7px;
-  margin: 5px;
-  border-radius: 25px;
-  transition: 0.3s;
-  position: absolute;
-  right: 8%;
-  top: 7%;
-}
-
-select,
-option {
-  background-color: var(--como);
-  border: none;
-  color: var(--kaitoke-green);
-  font-size: 12px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  padding: 1px;
-  margin: auto;
-  border-radius: 25px;
-  box-shadow: 10px 10px 20px grey;
-}
-
-button,
-input[type="submit"] {
-  background-color: var(--grey);
-  border: none;
-  color: var(--kaitoke-green);
-  font-size: 10px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  padding: 1px;
-  margin: auto;
-  border-radius: 25px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  width: 7.75%;
-  height: 1.5rem;
-}
-
-button:hover {
-  background-color: var(--sandal);
-  box-shadow: 10px 10px 20px grey;
-  color: #d5e7b8;
-}
-
-input[type="submit"]:hover {
-  background-color: var(--sandal);
-  box-shadow: 10px 10px 20px grey;
-  color: #d5e7b8;
-}
-
-#langbutton-en:hover {
-  background-color: var(--sandal);
-  box-shadow: 10px 10px 20px grey;
-  color: #d5e7b8;
-}
-
-#langbutton-fr:hover {
-  background-color: var(--sandal);
-  box-shadow: 10px 10px 20px grey;
-  color: #d5e7b8;
-}
-
-#langbutton-fr {
-  background-color: #93d293;
-  border: none;
-  color: var(--kaitoke-green);
-  font-size: 11px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  padding: 7px;
-  margin: 5px;
-  border-radius: 25px;
-  transition: 0.3s;
-  position: absolute;
-  right: 0%;
-  top: 7%;
-}
-
-footer {
-  position: relative;
-  bottom: 0;
-}
-
-.sites {
-  color: var(--walnut);
-}
-
-.question {
-  margin-bottom: 5px;
-  text-align: center;
-  /* Align text inside the question div to the left */
-}
-
-.question p {
-  margin-bottom: 5px;
-  /* Add some space below each question */
-}
-
-.question label,
-.question select {
-  display: inline-block;
-  /* Display labels and selects inline */
-}
-
-
-#form {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-#questions {
-  display: flex;
-  background-color: var(--grey);
-  border-radius: 7px;
-  width: 80%;
-  height: 62rem;
-}
-
-#questions {
-  display: flex;
-  flex-direction: column;
-  /* Change to column layout */
-  background-color: var(--grey);
-  border-radius: 7px;
-  width: 80%;
-  max-width: 600px;
-  /* Limit the maximum width for better readability */
-  margin: 0 auto;
-  /* Center the questions */
-  padding: 20px;
-  /* Add some padding for better appearance */
+    --kaitoke-green: #003e29;
+    --como: #d5e7b8;
+    --sandal: #885607;
+    --walnut: #633e31;
+    --grey: #8da290;
+  }
   
-}
-
-#projectdesc {
-  padding-top: 1.5rem;
-  left: 25%;
-  right: 25%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  align-items: center;
-}
-
-input[type="submit"] {
-  position: relative;
-  width: 8.75%;
-  height: 1.7rem;
-  border-radius: 5px;
-  left: 15vw;
-}
-
-input[type="number"] {
-  position: relative;
-  background-color: var(--como);
-  color: var(--kaitoke-green);
-  width: 20%;
-  height: 1.7rem;
-  border-radius: 5px;
-}
-
-a:link {
-  color: var(--walnut);
-  background-color: transparent;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-
-a:visited {
-  color: var(--sandal);
-  background-color: transparent;
-}
-
-a:hover {
-  color: var(--sandal);
-  background-color: transparent;
+  /* Styles: */
   
-}
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    text-align: center;
+    background-color: var(--como);
+    color: var(--sandal);
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    color: var(--walnut);
+  }
+  
+  #header {
+    display: flex;
+    position: sticky;
+    margin: 0;
+    padding: 10px;
+    top: 0%;
+    right: 0%;
+    left: 0%;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--grey);
+    z-index: 5;
+  }
+  
+  #langbutton-en {
+    background-color: #93d293;
+    border: none;
+    color: var(--kaitoke-green);
+    font-size: 11px;  
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding: 7px;
+    margin: 5px;
+    border-radius: 25px;
+    transition: 0.3s;
+    position: absolute;
+    right: 8%;
+    top: 7%;
+  }
+  
+  select,
+  option {
+    background-color: var(--como);
+    border: none;
+    color: var(--kaitoke-green);
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding: 1px;
+    margin: auto;
+    border-radius: 25px;
+    box-shadow: 10px 10px 20px grey;
+  }
+  
+  button,
+  input[type="submit"] {
+    background-color: var(--grey);
+    border: none;
+    color: var(--kaitoke-green);
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding: 1px;
+    margin: auto;
+    border-radius: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 7.75%;
+    height: 1.5rem;
+  }
+  
+  button:hover {
+    background-color: var(--sandal);
+    box-shadow: 10px 10px 20px grey;
+    color: #d5e7b8;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: var(--sandal);
+    box-shadow: 10px 10px 20px grey;
+    color: #d5e7b8;
+  }
+  
+  #langbutton-en:hover {
+    background-color: var(--sandal);
+    box-shadow: 10px 10px 20px grey;
+    color: #d5e7b8;
+  }
+  
+  #langbutton-fr:hover {
+    background-color: var(--sandal);
+    box-shadow: 10px 10px 20px grey;
+    color: #d5e7b8;
+  }
+  
+  #langbutton-fr {
+    background-color: #93d293;
+    border: none;
+    color: var(--kaitoke-green);
+    font-size: 11px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding: 7px;
+    margin: 5px;
+    border-radius: 25px;
+    transition: 0.3s;
+    position: absolute;
+    right: 0%;
+    top: 7%;
+  }
+  
+  footer {
+    position: relative;
+    bottom: 0;
+  }
+  
+  .sites {
+    color: var(--walnut);
+  }
+  
+  .question {
+    margin-bottom: 5px;
+    text-align: center;
+    /* Align text inside the question div to the left */
+  }
+  
+  .question p {
+    margin-bottom: 5px;
+    /* Add some space below each question */
+  }
+  
+  .question label,
+  .question select {
+    display: inline-block;
+    /* Display labels and selects inline */
+  }
+  
+  
+  #form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #questions {
+    display: flex;
+    background-color: var(--grey);
+    border-radius: 7px;
+    width: 80%;
+    height: 53rem;
+    max-width: 600px;
+    /* Limit the maximum width for better readability */
+    margin: 0 auto;
+    /* Center the questions */
+    padding: 15px;
+    /* Add some padding for better appearance */
+  }
+  
+  #projectdesc {
+    padding-top: 1.5rem;
+    left: 25%;
+    right: 25%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+  }
+  
+  input[type="submit"] {
+    position: relative;
+    width: 8.75%;
+    height: 1.7rem;
+    border-radius: 5px;
+    left: 15vw;
+    bottom: 1rem;
+  }
+  
+  input[type="number"] {
+    position: relative;
+    background-color: var(--como);
+    color: var(--kaitoke-green);
+    width: 20%;
+    height: 1.7rem;
+    border-radius: 5px;
+  }
+  
+  a:link {
+    color: var(--walnut);
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  
+  a:visited {
+    color: var(--sandal);
+    background-color: transparent;
+  }
+  
+  a:hover {
+    color: var(--sandal);
+    background-color: transparent;
+  }
+  
+  a:active {
+    color: var(--walnut);
+    background-color: transparent;
+  }
 
-a:active {
-  color: var(--walnut);
-  background-color: transparent;
-}
+  #box{
+    position: relative;
+    background-color: var(--grey);
+    padding-top: 5px;
+    height: 10rem;
+    width: 45%;
+    left: 27%;
+    bottom: 0.5rem;
+  }
+
+
