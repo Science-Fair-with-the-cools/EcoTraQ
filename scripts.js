@@ -1,4 +1,3 @@
-
 // Language files
 const translations = {
   en: {
@@ -116,8 +115,6 @@ function switchLanguage(lang) {
   document.getElementById('select3').textContent = translations[lang].select3;   //document.getElementById('select4').textContent = translations[lang].select4;   document.getElementById('select5').textContent = translations[lang].select5;   document.getElementById('select6').textContent = translations[lang].select6;   document.getElementById('select7').textContent = translations[lang].select7;   document.getElementById('select8').textContent = translations[lang].select8;   document.getElementById('select9').textContent = translations[lang].select9;   document.getElementById('select10').textContent = translations[lang].select10;   document.getElementById('select11').textContent = translations[lang].select11;
   document.getElementById('submit').value = translations[lang].submit;
   document.getElementById('pre_form').textContent = translations[lang].pre_form;
-
-
 }
 
 
@@ -139,14 +136,6 @@ function backToTop() {
 document.getElementById("carbonForm").addEventListener("submit", function(event) {
   event.preventDefault();
   // Define emission values for each option
-  const emissions = {
-
-// Function to handle form submission
-document.getElementById("carbonForm").addEventListener("submit", function(event) {
-  // Prevent the default form submission behavior
-  event.preventDefault();
-
-  // Define emission values for each section
   const emissions = {
     transportation: {
       "Car": 3.3863,
@@ -227,4 +216,4 @@ document.getElementById("carbonForm").addEventListener("submit", function(event)
     // Display result
     const resultElement = document.getElementById("result");
     resultElement.textContent = `Your estimated total carbon footprint is ${totalEmissions} tons of CO2 per year.`;
-  });
+  })});
