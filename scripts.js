@@ -172,7 +172,7 @@ document.getElementById("carbonForm").addEventListener("submit", function(event)
       "several_times": 0.52811735,
       "rarely_never": 0.110231,
     },
-      Habits: {
+      habits: {
       "always0": 3.63,
       "sometimes0": 1.8143694,
       "rarely0": 0.9071847,
