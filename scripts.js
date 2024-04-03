@@ -65,6 +65,11 @@ const emissions = {
       "sometimes0": 1.8143694,
       "rarely0": 0.9071847,
         //q
+      "always2": -0.15,
+      "sometimes2": -0.10,
+      "rarely2": -0.05,
+      "idk_dude": 0,
+        //q
       "always3": 0.0346,
       "sometimes3": 0.0174,
       "rarely3": 0.0110231,
