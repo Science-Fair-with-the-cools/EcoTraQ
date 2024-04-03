@@ -132,83 +132,81 @@ function backToTop() {
 }
 //backend
 
-// Function to handle form submission
-document.getElementById("carbonForm").addEventListener("submit", function(event) {
-  event.preventDefault();
-  // Define emission values for each option
-  const emissions = {
-    transportation: {
-      "Car": 3.3863,
-      "EV": 0,
-      "Public Bus": 1.25125,
-      "Bike": 0,
-      "Walking": 0,
-      //q2
-      "multiple_times": 1.008,
-      "once": 0.336,
-      "rarely": 0,
-    },
-    housing: {
-      "town": 6.08,
-      "single": 39.55,
-      "apartment": 10.33,
-      "mobile": 1.14,
+// Define emission values for each option
+const emissions = {
+  transportation: {
+    "Car": 3.3863,
+    "EV": 0,
+    "Public Bus": 1.25125,
+    "Bike": 0,
+    "Walking": 0,
+    //q2
+    "multiple_times": 1.008,
+    "once": 0.336,
+    "rarely": 0,
+  },
+  housing: {
+    "town": 6.08,
+    "single": 39.55,
+    "apartment": 10.33,
+    "mobile": 1.14,
+    //q
+    "Gas": 3.265,
+    "Elec": 3.311,
+    //q
+    "One": 0.1325,
+    "Two": 0.265,
+    "Three": 0.3975,
+    "All": 0.53,
+  },
+  diet: {
+    "vegan": 1.5,
+    "vegetarian": 1.7,
+    "omnivore": 2.5,
+    "Carnivore": 3.3,
+    "nobeef": 1.9,
+    //q
+    "several_times": 0.52811735,
+    "rarely_never": 0.110231,
+  },
+    habits: {
+    "always0": 3.63,
+    "sometimes0": 1.8143694,
+    "rarely0": 0.9071847,
       //q
-      "Gas": 3.265,
-      "Elec": 3.311,
+    "always2": 0,
+    "sometimes2": 0,
+    "rarely2": 0,
       //q
-      "One": 0.1325,
-      "Two": 0.265,
-      "Three": 0.3975,
-      "All": 0.53,
-    },
-    diet: {
-      "vegan": 1.5,
-      "vegetarian": 1.7,
-      "omnivore": 2.5,
-      "Carnivore": 3.3,
-      "nobeef": 1.9,
-      //q
-      "several_times": 0.52811735,
-      "rarely_never": 0.110231,
-    },
-      habits: {
-      "always0": 3.63,
-      "sometimes0": 1.8143694,
-      "rarely0": 0.9071847,
-        //q
-      "always2": 0,
-      "sometimes2": 0,
-      "rarely2": 0,
-        //q
-      "always3": 0.0346,
-      "sometimes3": 0.0174,
-      "rarely3": 0.0110231,
-      "idk4": 0.0087,
-    }
-  };
-
-  // Function to calculate total emissions for a section
-  function calculateSectionEmissions(sectionName) {
-    let sectionTotal = 0;
-    const formData = new FormData(document.getElementById("carbonForm"));
-    formData.forEach((value, key) => {
-      if (key.startsWith(sectionName)) {
-        sectionTotal += emissions[sectionName][value];
-      }
-    });
-    return sectionTotal;
+    "always3": 0.0346,
+    "sometimes3": 0.0174,
+    "rarely3": 0.0110231,
+    "idk4": 0.0087,
   }
+};
 
-  // Function to handle form submission
-  document.getElementById("carbonForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+// Function to calculate total emissions for a section
+function calculateSectionEmissions(sectionName) {
+  let sectionTotal = 0;
+  const formData = new FormData(document.getElementById("carbonForm"));
+  formData.forEach((value, key) => {
+    if (key.startsWith(sectionName)) {
+      sectionTotal += emissions[sectionName][value];
+    }
+  });
+  return sectionTotal;
+}
+
+
+// Function to handle form submission
+document.getElementById("submit").addEventListener("click", function CalcEmissions (event) {
+  event.preventDefault();
 
     // Calculate total emissions for each section
-    const transportationTotal = calculateSectionEmissions("transportation");
-    const housingTotal = calculateSectionEmissions("housing");
-    const dietTotal = calculateSectionEmissions("diet");
-    const habitsTotal = calculateSectionEmissions("habits");
+    let transportationTotal = calculateSectionEmissions("transportation");
+    let housingTotal = calculateSectionEmissions("housing");
+    let dietTotal = calculateSectionEmissions("diet");
+    let habitsTotal = calculateSectionEmissions("habits");
 
     // Calculate total emissions
     const totalEmissions = transportationTotal + housingTotal + dietTotal + habitsTotal;
@@ -216,4 +214,4 @@ document.getElementById("carbonForm").addEventListener("submit", function(event)
     // Display result
     const resultElement = document.getElementById("result");
     resultElement.textContent = `Your estimated total carbon footprint is ${totalEmissions} tons of CO2 per year.`;
-  })});
+  });
