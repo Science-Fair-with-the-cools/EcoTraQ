@@ -5,6 +5,7 @@
     --sandal: #885607;
     --walnut: #633e31;
     --grey: #8da290;
+    --gren: #93d293;
   }
   
   /* Styles: */
@@ -26,7 +27,7 @@
     color: var(--walnut);
   }
   
- #header {
+  #header {
   display: flex;
   position: sticky;
   margin: 0;
@@ -40,7 +41,7 @@
   z-index: 5;
   border-radius: 21px;
   box-shadow: 5px 5px 5px grey;
-}
+  }
   
   #langbutton-en {
     background-color: #93d293;
@@ -73,8 +74,8 @@
   }
   
   button,
-  input[type="submit"] {
-    background-color: var(--grey);
+    input[type="submit"] {
+    background-color: #93d293;
     border: none;
     color: var(--kaitoke-green);
     font-size: 10px;
@@ -95,7 +96,7 @@
     color: #d5e7b8;
   }
   
-  input[type="submit"]:hover {
+    input[type="submit"]:hover {
     background-color: var(--sandal);
     box-shadow: 10px 10px 20px grey;
     color: #d5e7b8;
@@ -167,7 +168,7 @@
     background-color: var(--grey);
     border-radius: 7px;
     width: 80%;
-    height: 53rem;
+    height: 50rem;
     max-width: 600px;
     /* Limit the maximum width for better readability */
     margin: 0 auto;
@@ -192,7 +193,6 @@
     width: 8.75%;
     height: 1.7rem;
     border-radius: 5px;
-    left: 15vw;
     bottom: 1rem;
   }
   
@@ -200,8 +200,8 @@
     position: relative;
     background-color: var(--como);
     color: var(--kaitoke-green);
-    width: 20%;
-    height: 1.7rem;
+    width: 15%;
+    height: 1.2rem;
     border-radius: 5px;
   }
   
@@ -227,7 +227,7 @@
     color: var(--walnut);
     background-color: transparent;
   }
-
+  
   #box{
     position: relative;
     background-color: var(--grey);
@@ -237,5 +237,5 @@
     left: 27%;
     bottom: 0.5rem;
   }
-
-
+  
+  
