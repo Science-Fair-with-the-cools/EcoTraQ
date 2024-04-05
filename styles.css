@@ -22,12 +22,6 @@
     font-family: 'Roboto', sans-serif;
   }
   
-  h1,
-  h2,
-  h3 {
-    color: var(--textcol);
-  }
-  
   #header {
   display: flex;
   position: sticky;
