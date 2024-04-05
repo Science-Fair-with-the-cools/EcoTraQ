@@ -37,14 +37,14 @@
   left: 0%;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #93d293;
+  background-color: var(--gren);
   z-index: 5;
   border-radius: 21px;
   box-shadow: 5px 5px 5px grey;
   }
   
   #langbutton-en {
-    background-color: #93d293;
+    background-color: var(--gren);
     border: none;
     color: var(--kaitoke-green);
     font-size: 11px;  
@@ -75,7 +75,7 @@
   
   button,
     input[type="submit"] {
-    background-color: #93d293;
+    background-color: var(--gren);
     border: none;
     color: var(--kaitoke-green);
     font-size: 10px;
@@ -91,31 +91,31 @@
   }
   
   button:hover {
-    background-color: var(--sandal);
+    background-color: var(--);
     box-shadow: 10px 10px 20px grey;
-    color: #d5e7b8;
+    color: #38A3A5;
   }
   
     input[type="submit"]:hover {
-    background-color: var(--sandal);
+    background-color: #38A3A5;
     box-shadow: 10px 10px 20px grey;
     color: #d5e7b8;
   }
   
   #langbutton-en:hover {
-    background-color: var(--sandal);
+    background-color: #38A3A5;
     box-shadow: 10px 10px 20px grey;
     color: #d5e7b8;
   }
   
   #langbutton-fr:hover {
-    background-color: var(--sandal);
+    background-color: #38A3A5;
     box-shadow: 10px 10px 20px grey;
     color: #d5e7b8;
   }
   
   #langbutton-fr {
-    background-color: #93d293;
+    background-color: var(--gren);
     border: none;
     color: var(--kaitoke-green);
     font-size: 11px;
@@ -174,6 +174,7 @@
     margin: 0 auto;
     /* Center the questions */
     padding: 15px;
+    color: var(--grey);
     /* Add some padding for better appearance */
   }
   
