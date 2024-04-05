@@ -37,6 +37,10 @@
   border-radius: 21px;
   box-shadow: 5px 5px 5px grey;
   }
+
+    h3{
+        color: var(--formtextcol);
+    }
   
   #langbutton-en {
     background-color: var(--buttonbg);
