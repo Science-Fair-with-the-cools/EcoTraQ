@@ -1,11 +1,11 @@
 /* Colour Palette  - changed the colours a bit for better reading/look*/
 :root {
-    --kaitoke-green: #003e29;
-    --como: #d5e7b8;
-    --sandal: #885607;
-    --walnut: #633e31;
-    --grey: #8da290;
-    --gren: #93d293;
+    --kaitoke-green: #22577A;
+    --como: #C7F9CC;
+    --sandal: #38A3A5;
+    --walnut: #22577A;
+    --grey: #57CC99;
+    --gren: #80ED99;
   }
   
   /* Styles: */
@@ -232,7 +232,7 @@
     position: relative;
     background-color: var(--grey);
     padding-top: 5px;
-    height: 10rem;
+    height: 12rem;
     width: 45%;
     left: 27%;
     bottom: 0.5rem;
