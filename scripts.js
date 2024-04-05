@@ -151,11 +151,11 @@ document.getElementById("goof").addEventListener("click", function CalcEmissions
         
         if (btnNum == 2){
 
-            if(calculateSectionEmissions("housing") >= 14){
+            if(calculateSectionEmissions("housing") >= 43){
                 summaryText.innerHTML = `<h3 id="sect-h">Housing:</h3>
                 <p id="sect-p">U suck =(</p>`;
             }
-            else if (calculateSectionEmissions("housing") < 14){
+            else if (calculateSectionEmissions("housing") < 43){
                 summaryText.innerHTML = `<h3 id="sect-h">Housing:</h3>
                 <p id="sect-p">U are awesome sauce =)</p>`;
             }
