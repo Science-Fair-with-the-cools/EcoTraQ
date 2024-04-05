@@ -119,7 +119,7 @@ document.getElementById("goof").addEventListener("click", function CalcEmissions
 
         // Display result
         let resultElement = document.getElementById("result");
-        resultElement.innerText = `Your estimated total carbon footprint is ${Math.round(totalEmissions)} tons of CO2 per year. \nYour estimated carbon footprint was ${numInput.value.toString()} tons. \nTake a look at how they compare!`;
+        resultElement.innerText = `Your estimated total carbon footprint is ${totalEmissions} tons of CO2 per year. \nYour estimated carbon footprint was ${numInput.value.toString()} tons. \nTake a look at how they compare!`;
 
           // Create buttons
           summaryBtns.innerHTML = `<button id="btn1" onclick="summaryManager(1)"></button>
