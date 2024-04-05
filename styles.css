@@ -2,9 +2,9 @@
 :root {
     --kaitoke-green: #22577A;
     --como: #C7F9CC;
-    --sandal: #38A3A5;
+    --sandal: #FFFFFF;
     --walnut: #22577A;
-    --grey: #57CC99;
+    --grey: #22577A;
     --gren: #80ED99;
   }
   
@@ -17,7 +17,7 @@
   body {
     text-align: center;
     background-color: var(--como);
-    color: var(--sandal);
+    color: var(--grey);
     font-family: 'Roboto', sans-serif;
   }
   
