@@ -119,7 +119,7 @@ document.getElementById("goof").addEventListener("click", function CalcEmissions
 
         // Display result
         let resultElement = document.getElementById("result");
-        resultElement.textContent = `Your estimated total carbon footprint is ${totalEmissions} tons of CO2 per year. Your estimated carbon footprint was ${numInput.value.toString()} tons. Take a look at how they compare!`;
+        resultElement.innerText = `Your estimated total carbon footprint is ${totalEmissions} tons of CO2 per year. \nYour estimated carbon footprint was ${numInput.value.toString()} tons. \nTake a look at how they compare!`;
 
           // Create buttons
           summaryBtns.innerHTML = `<button id="btn1" onclick="summaryManager(1)"></button>
@@ -144,10 +144,10 @@ document.getElementById("goof").addEventListener("click", function CalcEmissions
                 <p id="sect-p">In this section of the form, your answers present optimal levels carbon emissions with your transportation habbits. Keep using more renewable transport methods such as: public transportation, electric vehicles, walking and biking. =)</p>`;
             }
 
-            document.getElementById("btn1").style.backgroundColor = '#885607';
-            document.getElementById("btn2").style.backgroundColor = '#93d293';
-            document.getElementById("btn3").style.backgroundColor = '#93d293';
-            document.getElementById("btn4").style.backgroundColor = '#93d293';
+            document.getElementById("btn1").style.backgroundColor = '#57CC99';
+            document.getElementById("btn2").style.backgroundColor = '#80ED99';
+            document.getElementById("btn3").style.backgroundColor = '#80ED99';
+            document.getElementById("btn4").style.backgroundColor = '#80ED99';
         }
         
         if (btnNum == 2){
@@ -163,10 +163,10 @@ document.getElementById("goof").addEventListener("click", function CalcEmissions
 </p>`;
             }
 
-            document.getElementById("btn1").style.backgroundColor = '#93d293';
-            document.getElementById("btn2").style.backgroundColor = '#885607';
-            document.getElementById("btn3").style.backgroundColor = '#93d293';
-            document.getElementById("btn4").style.backgroundColor = '#93d293';
+            document.getElementById("btn1").style.backgroundColor = '#80ED99';
+            document.getElementById("btn2").style.backgroundColor = '#57CC99';
+            document.getElementById("btn3").style.backgroundColor = '#80ED99';
+            document.getElementById("btn4").style.backgroundColor = '#80ED99';
         }
 
         if(btnNum == 3) {
@@ -182,10 +182,10 @@ document.getElementById("goof").addEventListener("click", function CalcEmissions
 </p>`;
             }
 
-            document.getElementById("btn1").style.backgroundColor = '#93d293';
-            document.getElementById("btn2").style.backgroundColor = '#93d293';
-            document.getElementById("btn3").style.backgroundColor = '#885607';
-            document.getElementById("btn4").style.backgroundColor = '#93d293';
+            document.getElementById("btn1").style.backgroundColor = '#80ED99';
+            document.getElementById("btn2").style.backgroundColor = '#80ED99';
+            document.getElementById("btn3").style.backgroundColor = '#57CC99';
+            document.getElementById("btn4").style.backgroundColor = '#80ED99';
         }
 
         else if(btnNum == 4){
@@ -201,9 +201,9 @@ document.getElementById("goof").addEventListener("click", function CalcEmissions
 </p>`;
             }
 
-            document.getElementById("btn1").style.backgroundColor = '#93d293';
-            document.getElementById("btn2").style.backgroundColor = '#93d293';
-            document.getElementById("btn3").style.backgroundColor = '#93d293';
-            document.getElementById("btn4").style.backgroundColor = '#885607';
+            document.getElementById("btn1").style.backgroundColor = '#80ED99';
+            document.getElementById("btn2").style.backgroundColor = '#80ED99';
+            document.getElementById("btn3").style.backgroundColor = '#80ED99';
+            document.getElementById("btn4").style.backgroundColor = '#57CC99';
         }
     }
