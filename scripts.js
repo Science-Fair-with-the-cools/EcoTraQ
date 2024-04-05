@@ -20,9 +20,6 @@
   const select_element9 = document.getElementById("select-element9");
   const select_element10 = document.getElementById("select-element10");
 
-// Get textbox for summary
-const summaryText = document.getElementById("box");
-
 // Define emission values for each option
 const emissions = {
     transportation: {
@@ -54,10 +51,11 @@ const emissions = {
       "vegan": 1.5,
       "vegetarian": 1.7,
       "omnivore": 2.5,
-      "Carnivore": 3.3,
+      "carnivore": 3.3,
       "nobeef": 1.9,
       //q
       "several_times": 0.52811735,
+      "few_times": 0.41788635,
       "rarely_never": 0.110231,
     },
       habits: {
@@ -94,20 +92,26 @@ function calculateSectionEmissions(sectionName) {
 
     const numInput = document.getElementById("numInput");
 
+    // Get textbox for summary
+    const summaryText = document.getElementById("box");
+
+    // Get the div so we can make the buttons
+    const summaryBtns = document.getElementById("nav-btns");
+
 document.getElementById("goof").addEventListener("click", function CalcEmissions (event) {
         event.preventDefault();
 
-        if(select_element1.value == "" || select_element2.value == "" || select_element3.value.toString() == "" || select_element4.value == "" || select_element5.value == "" || select_element6.value == "" || select_element8.value == "" || select_element9.value == "" || select_element10.value == "") {
+        if(select_element1.value == "" || select_element2.value == "" || select_element3.value == "" || select_element4.value == "" || select_element5.value == "" || select_element6.value == "" || numInput.value.toString() == "" || select_element8.value == "" || select_element9.value == "" || select_element10.value == "") {
             window.alert("Please fill out the form =)");
         }
 
         else{
 
         // Calculate total emissions for each section
-        let transportationTotal = calculateSectionEmissions("transportation");
-        let housingTotal = calculateSectionEmissions("housing");
-        let dietTotal = calculateSectionEmissions("diet");
-        let habitsTotal = calculateSectionEmissions("habits");
+        const transportationTotal = calculateSectionEmissions("transportation");
+        const housingTotal = calculateSectionEmissions("housing");
+        const dietTotal = calculateSectionEmissions("diet");
+        const habitsTotal = calculateSectionEmissions("habits");
 
          // Calculate total emissions
         let totalEmissions = transportationTotal + housingTotal + dietTotal + habitsTotal;
@@ -116,24 +120,83 @@ document.getElementById("goof").addEventListener("click", function CalcEmissions
         let resultElement = document.getElementById("result");
         resultElement.textContent = `Your estimated total carbon footprint is ${totalEmissions} tons of CO2 per year. Your estimated carbon footprint was ${numInput.value.toString()} tons. Take a look at how they compare!`;
 
-         // Summary
-         summaryManager(1);
+          // Create buttons
+          summaryBtns.innerHTML = `<button id="btn1" onclick="summaryManager(1)"></button>
+          <button id="btn2" onclick="summaryManager(2)"></button>
+          <button id="btn3" onclick="summaryManager(3)"></button>
+          <button id="btn4" onclick="summaryManager(4)"></button>`;
 
-         // Create buttons
- 
-         // Get buttons 
-         const btn1 = document.getElementById("btn1");
-         const btn2 = document.getElementById("btn2");
-         const btn3 = document.getElementById("btn3");
-         const btn4 = document.getElementById("btn4");
+          // Summary
+          summaryManager(1);
         }
     });
 
     function summaryManager(btnNum){
         if (btnNum == 1){
-            if(transportationTotal >= 2){
+
+            if(calculateSectionEmissions("transportation") >= 2){
                 summaryText.innerHTML = `<h3 id="sect-h">Transportation:</h3>
                 <p id="sect-p">In this section of the form, your answers presented high levels of carbon emissions. To reduce carbon emissions with transportation, try walking, or biking for short distances and using an electric vehicle or public transportation for far distance travels. Also try traveling less by plane for vacations and try other methods such as cruises or roadtrips.</p>`;
             }
-        }   
+            else if(calculateSectionEmissions("transportation") < 2){
+                summaryText.innerHTML = `<h3 id="sect-h">Transportation:</h3>
+                <p id="sect-p">In this section of the form, your answers present optimal levels carbon emissions with your transportation habbits. Keep using more renewable transport methods such as: public transportation, electric vehicles, walking and biking. =)</p>`;
+            }
+
+            document.getElementById("btn1").style.backgroundColor = '#885607';
+            document.getElementById("btn2").style.backgroundColor = '#93d293';
+            document.getElementById("btn3").style.backgroundColor = '#93d293';
+            document.getElementById("btn4").style.backgroundColor = '#93d293';
+        }
+        
+        if (btnNum == 2){
+
+            if(calculateSectionEmissions("housing") >= 14){
+                summaryText.innerHTML = `<h3 id="sect-h">Housing:</h3>
+                <p id="sect-p">U suck =(</p>`;
+            }
+            else if (calculateSectionEmissions("housing") < 14){
+                summaryText.innerHTML = `<h3 id="sect-h">Housing:</h3>
+                <p id="sect-p">U are awesome sauce =)</p>`;
+            }
+
+            document.getElementById("btn1").style.backgroundColor = '#93d293';
+            document.getElementById("btn2").style.backgroundColor = '#885607';
+            document.getElementById("btn3").style.backgroundColor = '#93d293';
+            document.getElementById("btn4").style.backgroundColor = '#93d293';
+        }
+
+        if(btnNum == 3) {
+
+            if(calculateSectionEmissions("diet") >= 3.7){
+                summaryText.innerHTML = `<h3 id="sect-h">Diet:</h3>
+                <p id="sect-p">U eat too much meet, fatty =(</p>`;
+            }
+            else if(calculateSectionEmissions("diet") < 3.7){
+                summaryText.innerHTML = `<h3 id="sect-h">Diet:</h3>
+                <p id="sect-p">Keep up the veganism dude YOLO =)</p>`;
+            }
+
+            document.getElementById("btn1").style.backgroundColor = '#93d293';
+            document.getElementById("btn2").style.backgroundColor = '#93d293';
+            document.getElementById("btn3").style.backgroundColor = '#885607';
+            document.getElementById("btn4").style.backgroundColor = '#93d293';
+        }
+
+        else if(btnNum == 4){
+
+            if(calculateSectionEmissions("habits") >= 2.5){
+            summaryText.innerHTML = `<h3 id="sect-h">Habits:</h3>
+            <p id="sect-p">Fix ur habits loser</p>`;
+            }
+            else if(calculateSectionEmissions("habits") < 2.5){
+            summaryText.innerHTML = `<h3 id="sect-h">Habits:</h3>
+            <p id="sect-p">Wowie such a dreamy organised person =)</p>`;
+            }
+
+            document.getElementById("btn1").style.backgroundColor = '#93d293';
+            document.getElementById("btn2").style.backgroundColor = '#93d293';
+            document.getElementById("btn3").style.backgroundColor = '#93d293';
+            document.getElementById("btn4").style.backgroundColor = '#885607';
+        }
     }
