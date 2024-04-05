@@ -51,7 +51,7 @@
           <div class="question"><strong>Estimation</strong>
             <!-- Id is called pre-form -->
             <p id="pre-form"><strong>Before starting the questionnaire, estimate what you think your carbon footprint is. (**In tonnes**)</strong></p>
-            <input id="numInput" type="number" min="1" max="150" required>
+            <input id="numInput" type="number" min="1" required>
           </div>
           
           <div class="question"><strong>Transportation</strong>
@@ -111,14 +111,14 @@
 
           
 
-          <div class="question"><br><strong id="food">Food</strong>
+          <div class="question"><br><strong id="food">Diet</strong>
             <p id="diet"><strong>6.</strong> What best describes your diet?</p>
             <select id="select-element6" name="diet" required>
               <option value="">(select one)</option>
               <option value="vegan">Vegan</option>
               <option value="vegetarian">Vegetarian</option>
-              <option value="omnivore">Omnivore</option>
-              <option value="carnivore">Mostly Carnivorous</option>
+              <option value="omnivore">Omnivore (meet and vegetables)</option>
+              <option value="carnivore">Mostly Carnivorous (mainly meet)</option>
               <option value="nobeef">No beef, omnivorous diet</option>
             </select>
           </div>
@@ -128,6 +128,7 @@
             <select id="select-element7" name="meat_consumption">
               <option value="">N/A</option>
               <option value="several_times">Several times a week</option>
+              <option value="few_times">A few times a week</option>
               <option value="rarely_never">Rarely or never</option>
             </select>
           </div>
@@ -182,10 +183,7 @@
 <p id="sect-p">When you complete the form your summary will be displayed here.</p>
         </div>
         <div id="nav-btns">
-            <button id="btn1"></button>
-            <button id="btn2"></button>
-            <button id="btn3"></button>
-            <button id="btn4"></button>
+            
         </div>
     </div>
 
