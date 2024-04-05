@@ -42,6 +42,7 @@ const emissions = {
       "Gas": 3.265,
       "Elec": 3.311,
       //q
+      "None": 0,
       "One": 0.1325,
       "Two": 0.265,
       "Three": 0.3975,
