@@ -35,7 +35,7 @@ const emissions = {
     },
     housing: {
       "town": 6.08,
-      "single": 39.55,
+      "single": 13.1833333333,
       "apartment": 10.33,
       "mobile": 1.14,
       //q
@@ -152,12 +152,12 @@ document.getElementById("goof").addEventListener("click", function CalcEmissions
         
         if (btnNum == 2){
 
-            if(calculateSectionEmissions("housing") >= 43){
+            if(calculateSectionEmissions("housing") >= 17){
                 summaryText.innerHTML = `<h3 id="sect-h">Housing:</h3>
                 <p id="sect-p">Your housing situation seems to present high rates of carbon release per year. In order to help reduce your emissions, try switching to natural gas for heating your home. Also try relying less on appliances such as: dishwashers, washing machines and dryers for cleaning things. Remember to turn off your heating when you are leaving the house for travel and when buying new appliances look into eco-friendly or more efficient appliances.
 </p>`;
             }
-            else if (calculateSectionEmissions("housing") < 43){
+            else if (calculateSectionEmissions("housing") < 17){
                 summaryText.innerHTML = `<h3 id="sect-h">Housing:</h3>
                 <p id="sect-p">Your housing situation seems to present fairly low rates of carbon release. Make sure to keep conserving energy by using less appliances and using more eco friendly heating sources. When buying new appliances look into eco-friendly or more efficient appliances. =)
 </p>`;
@@ -192,7 +192,7 @@ document.getElementById("goof").addEventListener("click", function CalcEmissions
 
             if(calculateSectionEmissions("habits") >= 2.5){
             summaryText.innerHTML = `<h3 id="sect-h">Habits:</h3>
-            <p id="sect-p">Your everyday habits demonstrate sub-optima levels of carbon production in your day to day life. To help reduce carbon production caused within your everyday habits make sure to save water by taking shorter showers and closing sink while brushing your teeth. Also ensure to recycle and compost as much as possible and conserve your light bulbs (close lights when not in use).
+            <p id="sect-p">Your everyday habits demonstrate sub-optimal levels of carbon production in your day to day life. To help reduce carbon production caused within your everyday habits make sure to save water by taking shorter showers and closing sink while brushing your teeth. Also ensure to recycle and compost as much as possible and conserve your light bulbs (close lights when not in use).
 </p>`;
             }
             else if(calculateSectionEmissions("habits") < 2.5){
