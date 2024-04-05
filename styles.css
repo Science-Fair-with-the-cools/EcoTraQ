@@ -1,11 +1,12 @@
 /* Colour Palette  - changed the colours a bit for better reading/look*/
 :root {
-    --kaitoke-green: #22577A;
-    --como: #C7F9CC;
-    --sandal: #FFFFFF;
-    --walnut: #22577A;
-    --grey: #22577A;
-    --gren: #80ED99;
+    --formbg: #22577A;
+    --formtextcol: #FFFFFF;
+    --textcol: #22577A;
+    --buttonbg: #80ED99;
+    --btnhoverbg: #57CC99;
+    --bordercol: #38A3A5;
+    --bgcolor: #C7F9CC;
   }
   
   /* Styles: */
@@ -16,15 +17,15 @@
   
   body {
     text-align: center;
-    background-color: var(--como);
-    color: var(--grey);
+    background-color: var(--bgcolor);
+    color: var(--textcol);
     font-family: 'Roboto', sans-serif;
   }
   
   h1,
   h2,
   h3 {
-    color: var(--walnut);
+    color: var(--textcol);
   }
   
   #header {
@@ -37,14 +38,14 @@
   left: 0%;
   justify-content: space-evenly;
   align-items: center;
-  background-color: var(--gren);
+  background-color: var(--btnhoverbg);
   z-index: 5;
   border-radius: 21px;
   box-shadow: 5px 5px 5px grey;
   }
   
   #langbutton-en {
-    background-color: var(--gren);
+    background-color: var(--buttonbg);
     border: none;
     color: var(--kaitoke-green);
     font-size: 11px;  
@@ -61,23 +62,22 @@
   
   select,
   option {
-    background-color: var(--como);
+    background-color: var(--bgcolor);
     border: none;
-    color: var(--kaitoke-green);
+    color: var(--textcol);
     font-size: 12px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     padding: 1px;
     margin: auto;
     border-radius: 25px;
-    box-shadow: 10px 10px 20px grey;
   }
   
   button,
     input[type="submit"] {
-    background-color: var(--gren);
+    background-color: var(--buttonbg);
     border: none;
-    color: var(--kaitoke-green);
+    color: var(--textcol);
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -91,33 +91,33 @@
   }
   
   button:hover {
-    background-color: var(--);
+    background-color: var(--btnhoverbg);
     box-shadow: 10px 10px 20px grey;
-    color: #38A3A5;
+    color: var(--textcol);
   }
   
     input[type="submit"]:hover {
-    background-color: #38A3A5;
+    background-color: var(--btnhoverbg);
     box-shadow: 10px 10px 20px grey;
-    color: #d5e7b8;
+    color: var(--textcol);
   }
   
   #langbutton-en:hover {
-    background-color: #38A3A5;
+    background-color: var(--btnhoverbg);
     box-shadow: 10px 10px 20px grey;
-    color: #d5e7b8;
+    color: var(--textcol);
   }
   
   #langbutton-fr:hover {
-    background-color: #38A3A5;
+    background-color: var(--btnhoverbg);
     box-shadow: 10px 10px 20px grey;
-    color: #d5e7b8;
+    color: var(--textcol);
   }
   
   #langbutton-fr {
-    background-color: var(--gren);
+    background-color: var(--buttonbg);
     border: none;
-    color: var(--kaitoke-green);
+    color: var(--textcol);
     font-size: 11px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -136,7 +136,7 @@
   }
   
   .sites {
-    color: var(--walnut);
+    color: var(--textcol);
   }
   
   .question {
@@ -165,8 +165,10 @@
   
   #questions {
     display: flex;
-    background-color: var(--grey);
+    background-color: var(--formbg);
+    color: var(--formtextcol);
     border-radius: 7px;
+    border: 3px solid var(--bordercol);
     width: 80%;
     height: 53rem;
     max-width: 600px;
@@ -174,7 +176,6 @@
     margin: 0 auto;
     /* Center the questions */
     padding: 15px;
-    color: var(--grey);
     /* Add some padding for better appearance */
   }
   
@@ -199,15 +200,15 @@
   
   input[type="number"] {
     position: relative;
-    background-color: var(--como);
-    color: var(--kaitoke-green);
+    background-color: var(--bgcolor);
+    color: var(--textcol);
     width: 15%;
     height: 1.2rem;
     border-radius: 5px;
   }
   
   a:link {
-    color: var(--walnut);
+    color: var(--textcol);
     background-color: transparent;
     text-decoration: none;
     font-weight: bold;
@@ -215,25 +216,28 @@
   
   
   a:visited {
-    color: var(--sandal);
+    color: var(--textcol);
     background-color: transparent;
   }
   
   a:hover {
-    color: var(--sandal);
+    color: var(--textcol);
     background-color: transparent;
   }
   
   a:active {
-    color: var(--walnut);
+    color: var(--textcol);
     background-color: transparent;
   }
   
   #box{
     position: relative;
-    background-color: var(--grey);
+    background-color: var(--formbg);
+    color: var(--formtextcol);
+    border-radius: 7px;
+    border: 3px solid var(--bordercol);
     padding-top: 5px;
-    height: 12rem;
+    height: 13rem;
     width: 45%;
     left: 27%;
     bottom: 0.5rem;
