@@ -171,12 +171,12 @@ document.getElementById("goof").addEventListener("click", function CalcEmissions
 
         if(btnNum == 3) {
 
-            if(calculateSectionEmissions("diet") >= 3.7){
+            if(calculateSectionEmissions("diet") >= 3){
                 summaryText.innerHTML = `<h3 id="sect-h">Diet:</h3>
                 <p id="sect-p">According to your input, your eating habits produce increased output of carbon discharge. Some methods to reduce your carbon footprint from diet are: eating less meat/animal products (mainly beef) and consuming more plants (fruits and vegetables) from local areas. Sources say that having even only 1 vegan or vegetarian day a week can save 100-150 kg of CO2 per year!
 </p>`;
             }
-            else if(calculateSectionEmissions("diet") < 3.7){
+            else if(calculateSectionEmissions("diet") < 3){
                 summaryText.innerHTML = `<h3 id="sect-h">Diet:</h3>
                 <p id="sect-p">According to your input, your eating habits showed efficient outputs of carbon discharge. Continue reducing your consumption of animal products and keep eating more local fruits and vegetables. =)
 </p>`;
