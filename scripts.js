@@ -99,6 +99,8 @@ function calculateSectionEmissions(sectionName) {
     // Get the div so we can make the buttons
     const summaryBtns = document.getElementById("nav-btns");
 
+    const graph = document.getElementById("chart");
+
 document.getElementById("goof").addEventListener("click", function CalcEmissions (event) {
         event.preventDefault();
 
@@ -129,6 +131,35 @@ document.getElementById("goof").addEventListener("click", function CalcEmissions
 
           // Summary
           summaryManager(1);
+
+          graph.innerHTML = `<canvas id="myChart" style="width:100%;max-width:700px"></canvas>`
+
+          var xValues = ["Your emissions", "Average emissions", "Your estimate"];
+          var yValues = [totalEmissions, 17.7, numInput.value];
+          var barColors = [
+          "#b91d47",
+          "#00aba9",
+          "#2b5797",
+          "#e8c3b9",
+          "#1e7145"
+];
+
+          new Chart("myChart", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Your Carbon Emissions Compared to the Average"
+    }
+  }
+});
         }
     });
 
