@@ -172,7 +172,7 @@ document.getElementById("goof").addEventListener("click", function CalcEmissions
             }
             else if(calculateSectionEmissions("transportation") < 2){
                 summaryText.innerHTML = `<h3 id="sect-h">Transportation:</h3>
-                <p id="sect-p">In this section of the form, your answers present optimal levels carbon emissions with your transportation habbits. Keep using more renewable transport methods such as: public transportation, electric vehicles, walking and biking. =)</p>`;
+                <p id="sect-p">In this section of the form, your answers present optimal levels carbon emissions with your transportation habits. Keep using more renewable transport methods such as: public transportation, electric vehicles, walking and biking. =)</p>`;
             }
 
             document.getElementById("btn1").style.backgroundColor = '#57CC99';
