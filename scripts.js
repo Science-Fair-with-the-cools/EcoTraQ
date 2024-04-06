@@ -134,8 +134,8 @@ document.getElementById("goof").addEventListener("click", function CalcEmissions
 
           graph.innerHTML = `<canvas id="myChart" style="width:100%;max-width:700px"></canvas>`
 
-          var xValues = ["Your emissions", "Average emissions", "Your estimate"];
-          var yValues = [totalEmissions, 17.7, numInput.value];
+          var xValues = ["Your emissions", "Your estimate", "Average emissions"];
+          var yValues = [totalEmissions, numInput.value, 17.7];
           var barColors = [
           "#b91d47",
           "#00aba9",
