@@ -259,6 +259,12 @@
   margin: 0;
   left: 18.25%;
 }
+
+#chart{
+    position: relative;
+    left: 25%;
+}
+
 /* Media query for smaller screens */
 @media screen and (max-width: 750px) {
   /* Adjust height for smaller screens */
