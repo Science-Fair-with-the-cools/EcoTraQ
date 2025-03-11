@@ -58,17 +58,22 @@
             <p id="transportation"><strong>1.</strong> How do you typically commute to school or work?</p>
             <select id="select-element1" name="transportation" required>
               <option value="">(select one)</option>
-              <option value="Car">Car</option>
+              <option value="Car">Gas Based Vehicle</option>
               <option value="EV">Electric Vehicle</option>
+              <option value="Hybrid">Hybrid Vehicle</option>
               <option value="Public_Bus">Public Bus/Rail/Subway</option>
               <option value="Bike">Bike</option>
               <option value="Walking">Walking</option>
             </select>
           </div>
 
+          <div class="question">
+            <p id="commuteTime"><strong>2.</strong> How long does it usually take to commute to school or work? (minutes)</p>
+            <input id="timeInput" type="number" min="0" required>
+          </div>
 
           <div class="question">
-            <p id="flights"><strong>2.</strong> How often do you take flights for leisure or business?</p>
+            <p id="flights"><strong>3.</strong> How often do you take flights for leisure or business?</p>
             <select id="select-element2" name="flights" required>
               <option value="">(select one)</option>
               <option value="multiple_times">Multiple times a year</option>
@@ -78,7 +83,7 @@
           </div>
 
           <div class="question"><br><strong id="home">Housing</strong>
-            <p id="housing"><strong>3.</strong> What type of housing do you reside in?</p>
+            <p id="housing"><strong>4.</strong> What type of housing do you reside in?</p>
             <select id="select-element3" name="housing" required>
               <option value="">(select one)</option>
               <option value="town">Town house</option>
@@ -89,7 +94,7 @@
           </div>
 
           <div class="question">
-            <p id="heating"><strong>4.</strong> How do you heat your home?</p>
+            <p id="heating"><strong>5.</strong> How do you heat your home?</p>
             <select id="select-element4" name="heating" required>
               <option value="">(select one)</option>
               <option value="Gas">Natural Gas</option>
@@ -99,21 +104,17 @@
           </div>
           
           <div class="question">
-            <p id="appliances"><strong>5.</strong> Do you use any of the following? Dryer, washer, dishwasher, or refrigerator</p>
-            <select id="select-element5" name="appliances" required>
-              <option value="">(select one)</option>
-              <option value="None">N/A</option>
-              <option value="One">1</option>
-              <option value="Two">2</option>
-              <option value="Three">3</option>
-              <option value="All">All</option>
-            </select>
+            <p id="appliances"><strong>6.</strong> Do you use any of the following? Dryer, washer, dishwasher, refrigerator, small appliances (microwave, toaster, etc.)</p>
+            <div id="boxInps">
+                <p>Dryer + Washer</p><input type="checkbox" id="box1">
+                <p>Dishwasher</p><input type="checkbox" id="box2">
+                <p>Refrigerator</p><input type="checkbox" id="box3">
+                <p>Small appliances</p><input type="checkbox" id="box4">
+            </div>
           </div>
 
-          
-
-          <div class="question"><br><strong id="food">Diet</strong>
-            <p id="diet"><strong>6.</strong> What best describes your diet?</p>
+          <div class="question"><br><strong id="habits">Habits</strong>
+            <p id="diet"><strong>7.</strong> What best describes your diet?</p>
             <select id="select-element6" name="diet" required>
               <option value="">(select one)</option>
               <option value="vegan">Vegan</option>
@@ -125,45 +126,49 @@
           </div>
 
           <div class="question">
-            <p id="meat_consumption"><strong>7.</strong> (optional) How often do you consume meat or dairy products?</p>
-            <select id="select-element7" name="meat_consumption">
-              <option value="">N/A</option>
-              <option value="several_times">Several times a week</option>
-              <option value="few_times">A few times a week</option>
-              <option value="rarely_never">Rarely or never</option>
-            </select>
-          </div>
-
-          <div class="question"><br><strong id="Habits">Habits</strong>
-            <p id="Habits"><strong>8.</strong> How long do you shower (no bath)</p>
-            <select id="select-element8" name="Habits" required>
-              <option value="">(select one)</option>
-              <option value="always0">1 hour or less</option>
-              <option value="sometimes0">30 mins or less</option>
-              <option value="rarely0">10 mins or less</option>
-            </select>
+            <p id="shower"><strong>8.</strong> How long is your average shower? (minutes)</p>
+            <input id="showerInput" type="number" min="0" required>
           </div>
 
           <div class="question">
-            <p id="recycling_practice"><strong>9.</strong> Do you recycle or compost?</p>
-            <select id="select-element9" name="recycling_practice" required>
-              <option value="">(select one)</option>
-              <option value="always2">Both</option>
-              <option value="sometimes2">Recycle only</option>
-              <option value="rarely2">Compost only</option>
-              <option value="idk_dude">None</option>
-            </select>
+            <p id="recycling_practice"><strong>9.</strong> Do you practise recycling or composting?</p>
+            <div id="boxInps">
+                <p>Recycle</p><input type="checkbox" id="inp1">
+                <p>Compost</p><input type="checkbox" id="inp2">
+            </div>
           </div>
 
           <div class="question">
-            <p id="electricity_usage_hours"><strong>10.</strong> How many hours a day are your lights on? (estimate)</p>
-            <select id="select-element10" name="electricity_usage_hours" required>
+            <p id="clothes"><strong>10.</strong> How often do you purchase new clothing?</p>
+            <select id="select-element8" name="clothesTime" required>
               <option value="">(select one)</option>
-              <option value="always3">20 hours or more</option>
-              <option value="sometimes3">12 hours or more</option>
-              <option value="rarely3">6 hours or more</option>
-              <option value="idk4">less than 6 hours</option>
+              <option value="often">Multiple times per month</option>
+              <option value="month">Every month</option>
+              <option value="fewmonth">Every few months</option>
+              <option value="rarely">Rarely or Thrifted</option>
             </select>
+          </div>
+
+          <div class="question"><br><strong id="tech">Technology</strong>
+            <p id="owned"><strong>11.</strong> How many personal devices do you own?
+            <div id="boxInps">
+              <div class="numComb"><p>Mobile Phone / Tablet</p><input id="numPhones" type="number" min="0" required></div>
+              <div class="numComb"><p>Laptop</p><input id="numLaptops" type="number" min="0" required></div>
+              <div class="numComb"><p>Desktop / Gaming Console</p><input id="numDesktops" type="number" min="0" required></div>
+              <div class="numComb"><p>TV / Monitor</p><input id="numTV" type="number" min="0" required></div>
+            </div>
+          </div>
+
+          <div class="question">
+          <p id="eWaste"><strong>12.</strong> How often do you replace said technology?</p>
+          <select id="select-element7" name="replaced" required>
+            <option value="">(select one)</option>
+            <option value="Multiple">Multiple times per year</option>
+            <option value="1year">Every 1 - 2 years</option>
+            <option value="3year">Every 3 - 5 years</option>
+            <option value="6year">Every 6 - 7 years</option>
+            <option value="10year">Every 8 years or later</option>
+          </select>
           </div>
 
       </div>
