@@ -67,7 +67,7 @@
           </div>
 
           <div class="question">
-            <p id="commuteTimeText"><strong>2.</strong> How long does it usually take to commute to school or work? (minutes)</p>
+            <p id="commuteTimeText"><strong>2.</strong> How long does it usually take to commute to school or work? (km)</p>
             <input id="commuteTimeInp" type="number" min="0" required>
           </div>
 
@@ -105,10 +105,12 @@
           <div class="question">
             <p id="appliancesText"><strong>6.</strong> Do you use any of the following? Dryer, washer, dishwasher, refrigerator, small appliances (microwave, toaster, etc.)</p>
             <div id="boxInps">
-                <p>Dryer + Washer</p><input type="checkbox" id="dryerBox">
-                <p>Dishwasher</p><input type="checkbox" id="dishwashBox">
-                <p>Refrigerator</p><input type="checkbox" id="fridgeBox">
-                <p>Small appliances</p><input type="checkbox" id="smallAppliancesBox">
+                <p>Dryer + Washer</p><input type="checkbox" id="dryerBox" value="dryer">
+                <p>Dishwasher</p><input type="checkbox" id="dishwashBox" value="dishwasher">
+                <p>Refrigerator</p><input type="checkbox" id="fridgeBox" value="refrigerator">
+                <p>Small appliances</p><input type="checkbox" id="smallAppliancesBox" value="smallApps">
+                <p>Electric Stove</p><input type="checkbox" id="stoveElecBox" value="stoveElec">
+                <p>Gas Stove</p><input type="checkbox" id="stoveGasBox" value="stoveGas">
             </div>
           </div>
 
@@ -134,8 +136,8 @@
           <div class="question">
             <p id="recyclingText"><strong>9.</strong> Do you practise recycling or composting?</p>
             <div id="boxInps">
-                <p>Recycle</p><input type="checkbox" id="recyclingBox">
-                <p>Compost</p><input type="checkbox" id="compostBox">
+                <p>Recycle</p><input type="checkbox" id="recyclingBox" value="recycle">
+                <p>Compost</p><input type="checkbox" id="compostBox" value="compost">
             </div>
           </div>
 
@@ -180,7 +182,7 @@
         </div>
     </div>
 
-    <div id="chart">
+    <div id="piChart">
       
     </div>
 
