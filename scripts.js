@@ -139,66 +139,62 @@ function calculateSectionEmissions(sectionName) {
 }
 
 document.getElementById("sumbitButton").addEventListener("click", function CalcEmissions (event) {
-       event.preventDefault();
+    event.preventDefault();
 
-       if(1 + 2 == 0) { // Do at end
-           window.alert("Please fill out the form =)");
-       }
+    // Check if any required input is missing
+    if (!numInput.value || !question1.value || !question2.value || !question3.value || !question4.value || !question5.value || !question7.value || !question8.value || !question10.value || 
+        (question11NumOfPhones.value === "") || (question11NumOfLaptops.value === "") || (question11NumOfDesktops.value === "") || (question11NumOfTVs.value === "")) {
+        
+        // Alert the user that they need to fill out all the fields
+        window.alert("Please fill out all the fields in the form.");
+        return; // Exit the function if inputs are missing
+    }
 
-       else {
+    // If all inputs are provided, proceed with calculation
+    const transportationTotal = parseFloat(calculateSectionEmissions("transportation"));
+    const housingTotal = parseFloat(calculateSectionEmissions("housing"));
+    const habitsTotal = parseFloat(calculateSectionEmissions("habits"));
+    const lifestyleTotal = parseFloat(calculateSectionEmissions("lifestyle"));
 
-       // Calculate total emissions for each section
-       const transportationTotal = parseFloat(calculateSectionEmissions("transportation"));
-       const housingTotal = parseFloat(calculateSectionEmissions("housing"));
-       const habitsTotal = parseFloat(calculateSectionEmissions("habits"));
-       const lifestyleTotal = parseFloat(calculateSectionEmissions("lifestyle"));
+    // Calculate total emissions
+    let totalEmissions = transportationTotal + housingTotal + habitsTotal + lifestyleTotal;
 
-        // Calculate total emissions
-       let totalEmissions = transportationTotal + housingTotal + habitsTotal + lifestyleTotal;
+    // Display result
+    let resultElement = document.getElementById("result");
+    resultElement.innerText = `Your estimated total carbon footprint is ${totalEmissions} tons of CO2 per year. \nYour estimated carbon footprint was ${numInput.value} tons. \nTake a look at how they compare! \n**For Reference** Ontario’s emissions per capita are the third lowest in Canada, at 10.1 tonnes of CO2 \nThis is 43% below the Canadian average of 17.7 tonnes per capita.`;
 
-       // Display result
-       let resultElement = document.getElementById("result");
-       resultElement.innerText = `Your estimated total carbon footprint is ${totalEmissions} tons of CO2 per year. \nYour estimated carbon footprint was ${numInput.value} tons. \nTake a look at how they compare! \n**For Reference** Ontario’s emissions per capita are the third lowest in Canada, at 10.1 tonnes of CO2 \nThis is 43% below the Canadian average of 17.7 tonnes per capita.`;
+    // Create buttons
+    summaryBtns.innerHTML = `<button id="btn1" onclick="summaryManager(1)"></button>
+                             <button id="btn2" onclick="summaryManager(2)"></button>
+                             <button id="btn3" onclick="summaryManager(3)"></button>
+                             <button id="btn4" onclick="summaryManager(4)"></button>`;
 
-         // Create buttons
-         summaryBtns.innerHTML = `<button id="btn1" onclick="summaryManager(1)"></button>
-         <button id="btn2" onclick="summaryManager(2)"></button>
-         <button id="btn3" onclick="summaryManager(3)"></button>
-         <button id="btn4" onclick="summaryManager(4)"></button>`;
+    // Summary
+    summaryManager(1);
 
-         // Summary
-         summaryManager(1);
+    piGraph.innerHTML = `<canvas id="myChart" style="width:100%;max-width:700px"></canvas>`;
 
-         piGraph.innerHTML = `<canvas id="myChart" style="width:100%;max-width:700px"></canvas>`
+    var xValues = ["Your emissions", "Your estimate", "Average emissions"];
+    var yValues = [totalEmissions, numInput.value, 17.7];
+    var barColors = ["#b91d47", "#00aba9", "#2b5797", "#e8c3b9", "#1e7145"];
 
-         var xValues = ["Your emissions", "Your estimate", "Average emissions"];
-         var yValues = [totalEmissions, numInput.value, 17.7];
-         var barColors = [
-         "#b91d47",
-         "#00aba9",
-         "#2b5797",
-         "#e8c3b9",
-         "#1e7145"
-        ];
-
- new Chart("myChart", {
- type: "pie",
- data: {
-   labels: xValues,
-   datasets: [{
-     backgroundColor: barColors,
-     data: yValues
-   }]
- },
- options: {
-   title: {
-     display: true,
-     text: "Your Carbon Emissions Compared to the Average"
-   }
- }
+    new Chart("myChart", {
+        type: "pie",
+        data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: "Your Carbon Emissions Compared to the Average"
+            }
+        }
+    });
 });
-       }
-   });
 
    function summaryManager(btnNum){
        if (btnNum == 1){
