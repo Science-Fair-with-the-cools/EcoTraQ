@@ -93,7 +93,12 @@
           </div>
 
           <div class="question">
-            <p id="heatingText"><strong>5.</strong> How do you heat your home?</p>
+            <p id="houseMembersText"><strong>5.</strong> How many occupants live in your home?</p>
+            <input id="occupantsInp" type="number" min="1" required>
+          </div>
+
+          <div class="question">
+            <p id="heatingText"><strong>6.</strong> How do you heat your home?</p>
             <select id="heatingSelect" name="heating" required>
               <option value="">(select one)</option>
               <option value="GasHeat">Natural Gas</option>
@@ -103,7 +108,7 @@
           </div>
           
           <div class="question">
-            <p id="appliancesText"><strong>6.</strong> Do you use any of the following? Dryer, washer, dishwasher, refrigerator, small appliances (microwave, toaster, etc.)</p>
+            <p id="appliancesText"><strong>7.</strong> Do you use any of the following? Dryer, washer, dishwasher, refrigerator, small appliances (microwave, toaster, etc.)</p>
             <div id="boxInps">
                 <p>Dryer + Washer</p><input type="checkbox" id="dryerBox" value="dryer">
                 <p>Dishwasher</p><input type="checkbox" id="dishwashBox" value="dishwasher">
@@ -115,7 +120,7 @@
           </div>
 
           <div class="question"><br><strong id="habits">Habits</strong>
-            <p id="dietText"><strong>7.</strong> What best describes your diet?</p>
+            <p id="dietText"><strong>8.</strong> What best describes your diet?</p>
             <select id="dietSelect" name="diet" required>
               <option value="">(select one)</option>
               <option value="vegan">Vegan</option>
@@ -129,12 +134,12 @@
           </div>
 
           <div class="question">
-            <p id="showerText"><strong>8.</strong> How long is your average shower? (minutes)</p>
+            <p id="showerText"><strong>9.</strong> How long is your average shower? (minutes)</p>
             <input id="showerInp" type="number" min="0" required>
           </div>
 
           <div class="question">
-            <p id="recyclingText"><strong>9.</strong> Do you practise recycling or composting?</p>
+            <p id="recyclingText"><strong>10.</strong> Do you practise recycling or composting?</p>
             <div id="boxInps">
                 <p>Recycle</p><input type="checkbox" id="recyclingBox" value="recycle">
                 <p>Compost</p><input type="checkbox" id="compostBox" value="compost">
@@ -142,7 +147,7 @@
           </div>
 
           <div class="question"><br><strong id="lifestyle">Lifestyle</strong>
-            <p id="clothesText"><strong>10.</strong> How often do you purchase new clothing?</p>
+            <p id="clothesText"><strong>11.</strong> How often do you purchase new clothing?</p>
             <select id="clothesSelect" name="clothesTime" required>
               <option value="">(select one)</option>
               <option value="oftenClothes">Multiple times per month</option>
@@ -153,7 +158,7 @@
           </div>
 
           <div class="question">
-            <p id="devicesText"><strong>11.</strong> How many personal devices do you own?
+            <p id="devicesText"><strong>12.</strong> How many personal devices do you own?
             <div id="boxInps">
               <div class="numComb"><p>Mobile Phone / Tablet</p><input id="numPhones" type="number" min="0" required></div>
               <div class="numComb"><p>Laptop</p><input id="numLaptops" type="number" min="0" required></div>
@@ -177,9 +182,8 @@
             <h3 id="resultsTitle"></h3>
             <p id="resultsText">When you complete the form your summary will be displayed here.</p>
         </div>
-        <div id="navBtns">
-            
-        </div>
+    </div>
+    <div id="navBtns">    
     </div>
 
     <div id="piChart">
