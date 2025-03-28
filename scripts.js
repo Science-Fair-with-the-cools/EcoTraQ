@@ -15,15 +15,22 @@ const summaryBtns = document.getElementById("navBtns");
 // piChart holder
 const piGraph = document.getElementById("piChart");
 
+// barGraph holders
+const barGraphA = document.getElementById("barGraphA");
+
+// worldsText
+const worldsText = document.getElementById("worldsText");
+
 // Aquire all of the questions
 const numInput = document.getElementById("predictionInp");
+
 const question1 = document.getElementById("transportSelect");
 const question2 = document.getElementById("commuteTimeInp");
 const question3 = document.getElementById("flightsSelect");
+
 const question4 = document.getElementById("housingSelect");
 const question5 = document.getElementById("heatingSelect");
 const question5b = document.getElementById("occupantsInp");
-
 const question6DryerBox = document.getElementById("dryerBox");
 const question6DishwasherBox = document.getElementById("dishwashBox");
 const question6FridgeBox = document.getElementById("fridgeBox");
@@ -33,12 +40,10 @@ const question6SmallAppsBox = document.getElementById("smallAppliancesBox");
 
 const question7 = document.getElementById("dietSelect");
 const question8 = document.getElementById("showerInp");
-
 const question9RecycleBox = document.getElementById("recyclingBox");
 const question9CompostBox = document.getElementById("compostBox");
 
 const question10 = document.getElementById("clothesSelect");
-
 const question11NumOfPhones = document.getElementById("numPhones");
 const question11NumOfLaptops = document.getElementById("numLaptops");
 const question11NumOfDesktops = document.getElementById("numDesktops");
@@ -80,8 +85,7 @@ const questionsArr = {
    // Q.7
    "vegan": 1.06,
    "vegetarian": 1.39,
-   "omnivore": 2.5,
-   "carnivore": 3.3,
+   "omnivore": 3.3,
    "halal": 3.2315261,
    "pesc": 1.43,
    "noBeef": 1.9,
@@ -174,7 +178,7 @@ document.getElementById("sumbitButton").addEventListener("click", function CalcE
 
    // Display result
    let resultElement = document.getElementById("result");
-   resultElement.innerText = `Your estimated total carbon footprint is ${totalEmissions} tons of CO2 per year. \nYour estimated carbon footprint was ${numInput.value} tons. \nTake a look at how they compare! \n**For Reference** Ontario’s emissions per capita are the third lowest in Canada, at 10.1 tonnes of CO2 \nThis is 43% below the Canadian average of 17.7 tonnes per capita.`;
+   resultElement.innerText = `Your estimated total carbon footprint is ${totalEmissions} tons of CO2 per year. \nYour estimated carbon footprint was ${numInput.value} tons. \nTake a look at how they compare! \n**For Reference** Ontario’s emissions per capita are the third lowest in Canada, at 10.4 tonnes of CO2 \nThis is 43% below the Canadian average of 18.2 tonnes per capita.`;
 
    // Create buttons
    summaryBtns.innerHTML = `<button id="btn1" onclick="summaryManager(1)"></button>
@@ -185,13 +189,13 @@ document.getElementById("sumbitButton").addEventListener("click", function CalcE
    // Summary
    summaryManager(1);
 
-   piGraph.innerHTML = `<canvas id="myChart" style="width:100%;max-width:700px"></canvas>`;
+   piGraph.innerHTML = `<canvas id="pieChart" style="width:100%;max-width:700px"></canvas>`;
 
-   var xValues = ["Your emissions", "Your estimate", "Average emissions"];
-   var yValues = [totalEmissions, numInput.value, 17.7];
-   var barColors = ["#b91d47", "#00aba9", "#2b5797", "#e8c3b9", "#1e7145"];
+   var xValues = ["Your emissions", "Ontario Average", "Canadian Average"];
+   var yValues = [totalEmissions, 10.4, 18.2];
+   var barColors = ["#b91d47", "#00aba9", "#2b5797"];
 
-   new Chart("myChart", {
+   new Chart("pieChart", {
        type: "pie",
        data: {
            labels: xValues,
@@ -203,22 +207,79 @@ document.getElementById("sumbitButton").addEventListener("click", function CalcE
        options: {
            title: {
                display: true,
-               text: "Your Carbon Emissions Compared to the Average"
+               text: "Your Carbon Emissions Compared to Canadian Averages"
            }
        }
    });
+
+const maxValue = Math.max(totalEmissions, numInput.value);
+const canvasHeight = maxValue * 10; // Adjust the multiplier as needed for better visibility
+
+barGraphA.innerHTML = `<canvas id="barChartA" style="width:100%; max-width:350px; height:${canvasHeight}px;"></canvas>`;
+
+new Chart("barChartA", {
+    type: 'bar',
+    data: {
+        labels: ['Your Emissions', 'Your Estimate'],
+        datasets: [{
+            label: 'Tons of CO2 (Every Year)',
+            data: [totalEmissions, numInput.value],
+            backgroundColor: [
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+            ],
+            borderColor: [
+                'rgba(54, 162, 235, 1)',
+                'rgba(153, 102, 255, 1)',
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+              min: 0, // Start y-axis at 0
+              max: maxValue + 10, // Set max to a bit higher than the max value
+            },
+          },
+        ],
+      },
+    }
+});
+
+numOfWorlds = Math.ceil((totalEmissions * 8191988453) / 100000000000)
+// 12 125 424 420 tons annually (How much earth can take from human production)
+worldsText.innerHTML += `<p>If everyone's carbon footprint was the same as yours. Our society would require ${numOfWorlds} Earths to live sustainably</p>`
+
+for(i = 0; i < numOfWorlds; i++){
+  worldsText.innerHTML += `<img src="https://imgs.search.brave.com/KAF_7FehoNYG97ZheOYW4DtefIGZk_UTLFlge6aPYyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbmcu/cG5ndHJlZS5jb20v/ZWxlbWVudF9waWMv/MTYvMDUvMjkvMDA1/NzQ5YzQwODU1MDUy/LnBuZw" alt="Earth"/>`
+}
+
 });
 
   function summaryManager(btnNum){
       if (btnNum == 1){
 
-          if(parseFloat(calculateSectionEmissions("transportation")) >= 2){
+          if(parseFloat(calculateSectionEmissions("transportation")) >= 3){
               summaryText.innerHTML = `<h3 id="sect-h">Transportation:</h3>
-              <p id="sect-p">In this section of the form, your answers presented high levels of carbon emissions. To reduce carbon emissions with transportation, try walking, or biking for short distances and using an electric vehicle or public transportation for far distance travels. Also try traveling less by plane for vacations and try other methods such as cruises or roadtrips.</p>`;
+            <p id="sect-p">
+            Your transportation choices resulted in sub-optimal annual CO2 production. We would recommend improving your carbon footprint by using net 0 transportation methods such as walking or biking for short distances and investing in electric or hybrid vehicles or using public transport for longer daily commuting distances. Additionally, keeping a limit of 1 plane trip for leisure every year to help reduce your carbon footprint. Did you know that driving a car for 75km (1 hour) everyday for a year contributes to 6 tons of C02? Additionally taking multiple flights a year adds 1 whole ton of CO2 to your footprint every year.
+            </p>`;
+          }
+          else if(parseFloat(calculateSectionEmissions("transportation")) >= 2){
+            summaryText.innerHTML = `<h3 id="sect-h">Transportation:</h3>
+            <p id="sect-p">
+            Your transportation choices resulted in average levels of yearly CO2 production. To improve your carbon footprint try using net 0 methods of transportation such as walking or biking for short distances and investing in electric or hybrid vehicles or public transport for longer daily commuting distances. Additionally, keeping a limit of 1 plane trip for leisure every year to help reduce your carbon footprint. Did you know that driving a car for 75km (1 hour) everyday for a year contributes to 6 tons of C02 alone?
+            </p>`
           }
           else if(parseFloat(calculateSectionEmissions("transportation")) < 2){
-              summaryText.innerHTML = `<h3 id="sect-h">Transportation:</h3>
-              <p id="sect-p">In this section of the form, your answers present optimal levels carbon emissions with your transportation habits. Keep using more renewable transport methods such as: public transportation, electric vehicles, walking and biking. =)</p>`;
+            summaryText.innerHTML = `<h3 id="sect-h">Transportation:</h3>
+            <p id="sect-p">
+            Your transportation choices resulted in optimal levels of CO2 production per year. Make sure to continue using net 0 methods of transportation such as walking or biking for short distances and continuing to use electric or hybrid vehicles or public transport for longer daily commuting distances. Did you know that driving a car for 75km (1 hour) everyday for a year contributes to 6 tons of C02?
+            </p>`;
           }
 
           document.getElementById("btn1").style.backgroundColor = '#57CC99';
@@ -229,15 +290,23 @@ document.getElementById("sumbitButton").addEventListener("click", function CalcE
       
       if (btnNum == 2){
 
-          if (parseFloat(calculateSectionEmissions("housing")) >= 17){
-              summaryText.innerHTML = `<h3 id="sect-h">Housing:</h3>
-              <p id="sect-p">Your housing situation seems to present high rates of carbon release per year. In order to help reduce your emissions, try switching to natural gas for heating your home. Also try relying less on appliances such as: dishwashers, washing machines and dryers for cleaning things. Remember to turn off your heating when you are leaving the house for travel and when buying new appliances look into eco-friendly or more efficient appliances.
-</p>`;
+          if (parseFloat(calculateSectionEmissions("housing")) >= 12){
+            summaryText.innerHTML = `<h3 id="sect-h">Housing:</h3>
+            <p id="sect-p">
+            Your housing situation showed high rates of annual CO2 production. To improve your situation, try living with more roommates to spread out the total CO2 production amount across all residents as just 1 single home produces a total 38 tons of CO2! Additionally, consider hand washing your dishes and mitigate the number of small appliances in your home.
+            </p>`;
           }
-          else if (parseFloat(calculateSectionEmissions("housing")) < 17){
-              summaryText.innerHTML = `<h3 id="sect-h">Housing:</h3>
-              <p id="sect-p">Your housing situation seems to present fairly low rates of carbon release. Make sure to keep conserving energy by using less appliances and using more eco friendly heating sources. When buying new appliances look into eco-friendly or more efficient appliances. =)
-</p>`;
+          else if(parseFloat(calculateSectionEmissions("housing")) >= 8){
+            summaryText.innerHTML = `<h3 id="sect-h">Housing:</h3>
+            <p id="sect-p">
+            Your transportation choices resulted in average levels of yearly CO2 production. To improve your carbon footprint try using net 0 methods of transportation such as walking or biking for short distances and investing in electric or hybrid vehicles or public transport for longer daily commuting distances. Additionally, keeping a limit of 1 plane trip for leisure every year to help reduce your carbon footprint. Did you know that driving a car for 75km (1 hour) everyday for a year contributes to 6 tons of C02 alone?
+            </p>`
+          }
+          else if (parseFloat(calculateSectionEmissions("housing")) < 8){
+            summaryText.innerHTML = `<h3 id="sect-h">Housing:</h3>
+            <p id="sect-p">
+            Your housing situation presented low rates of yearly CO2 production. Keep living with roommates to spread out the total CO2 production amount of all of the residents as 1 single home produces a total 38 tons of CO2!
+            </p>`;
           }
 
           document.getElementById("btn1").style.backgroundColor = '#80ED99';
@@ -248,15 +317,23 @@ document.getElementById("sumbitButton").addEventListener("click", function CalcE
 
       if(btnNum == 3) {
 
-          if(parseFloat(calculateSectionEmissions("habits")) >= 3){
-              summaryText.innerHTML = `<h3 id="sect-h">Habits:</h3>
-              <p id="sect-p">According to your input, your eating habits produce increased output of carbon discharge. Some methods to reduce your carbon footprint from diet are: eating less meat/animal products (mainly beef) and consuming more plants (fruits and vegetables) from local areas. Sources say that having even only 1 vegan or vegetarian day a week can save 100-150 kg of CO2 per year!
-</p>`;
+          if(parseFloat(calculateSectionEmissions("habits")) >= 6.6){
+            summaryText.innerHTML = `<h3 id="sect-h">Habits:</h3>
+            <p id="sect-p">
+            Your daily habits contribute to high yearly CO2 production. To improve, consider taking shorter showers, incorporating more plant-based meals into your diet, and being more diligent with recycling and composting. These changes can significantly reduce your environmental impact. Did you know if every household in Canada shortened their shower time by just one minute, it could save enough water annually to fill over 200,000 Olympic-sized swimming pools!
+            </p>`;
           }
-          else if(parseFloat(calculateSectionEmissions("habits")) < 3){
-              summaryText.innerHTML = `<h3 id="sect-h">Habits:</h3>
-              <p id="sect-p">According to your input, your eating habits showed efficient outputs of carbon discharge. Continue reducing your consumption of animal products and keep eating more local fruits and vegetables. =)
-</p>`;
+          else if(parseFloat(calculateSectionEmissions("habits")) >= 6){
+            summaryText.innerHTML = `<h3 id="sect-h">Habits:</h3>
+            <p id="sect-p">
+            Your daily habits result in an average yearly CO2 production. To reduce your carbon footprint, try implementing sustainable practices such as taking shorter showers, adjusting your diet to include more plant-based foods, and improving your recycling and composting habits. Did you know a single vegetarian meal can save about 2.5 kg of CO2 compared to a meat-based meal!
+            </p>`
+          }
+          else if(parseFloat(calculateSectionEmissions("habits")) < 6){
+            summaryText.innerHTML = `<h3 id="sect-h">Habits:</h3>
+            <p id="sect-p">
+            Your daily habits result in low yearly CO2 production. Keep up your sustainable practices such as taking shorter showers, maintaining an eco-friendly diet, and actively recycling and composting. These small actions collectively make a big difference in reducing emissions. Did you know composting can reduce household waste by up to 30%, keeping it out of landfills and reducing methane emissions!
+            </p>`;
           }
 
           document.getElementById("btn1").style.backgroundColor = '#80ED99';
@@ -269,13 +346,21 @@ document.getElementById("sumbitButton").addEventListener("click", function CalcE
 
           if(parseFloat(calculateSectionEmissions("lifestyle")) >= 2.5){
           summaryText.innerHTML = `<h3 id="sect-h">Lifestyle:</h3>
-          <p id="sect-p">Your everyday habits demonstrate sub-optimal levels of carbon production in your day to day life. To help reduce carbon production caused within your everyday habits make sure to save water by taking shorter showers and closing sink while brushing your teeth. Also ensure to recycle and compost as much as possible and conserve your light bulbs (close lights when not in use).
-</p>`;
+          <p id="sect-p">
+          Your lifestyle choices contribute to high yearly CO2 production. To lower your footprint, consider purchasing second-hand or sustainable clothing, using electronics for their full lifespan before replacing them, and avoiding unnecessary purchases. E-waste accounts for 70% of toxic waste in landfills proper recycling and reuse of electronics can help reduce environmental harm!
+          </p>`;
           }
-          else if(parseFloat(calculateSectionEmissions("lifestyle")) < 2.5){
+          else if(parseFloat(calculateSectionEmissions("lifestyle")) >= 1.5){
           summaryText.innerHTML = `<h3 id="sect-h">Lifestyle:</h3>
-          <p id="sect-p">Your everyday habits demonstrate optimal levels of carbon production in your day to day life. Make sure to continue practicing efficient habits such as water conservation, light bulb conservation and composting and recycling. =)
-</p>`;
+          <p id="sect-p">
+          Your lifestyle choices result in an average yearly CO2 production. To further reduce your carbon footprint, try buying second-hand or sustainable clothing, extending the lifespan of your electronics before replacing them, and limiting unnecessary purchases. Producing a single smartphone generates around 85 kg of CO2, so using your device for just one extra year can significantly cut emissions!
+          </p>`
+          }
+          else if(parseFloat(calculateSectionEmissions("lifestyle")) < 1.5){
+          summaryText.innerHTML = `<h3 id="sect-h">Lifestyle:</h3>
+          <p id="sect-p">
+          Your lifestyle choices contribute to minimal CO2 production each year. Your conscious decisions to purchase second-hand or sustainable clothing, use electronics for their full lifespan before replacing them, and limit unnecessary purchases help keep your carbon footprint low. The fashion industry is responsible for about 10% of global carbon emissions, buying second-hand can help reduce this impact!
+          </p>`;
           }
 
           document.getElementById("btn1").style.backgroundColor = '#80ED99';
