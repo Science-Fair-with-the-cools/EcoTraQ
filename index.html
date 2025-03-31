@@ -3,6 +3,7 @@
 
 <head>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title id="title">EcoTraQ (Carbon footprint calculator)</title>
@@ -10,13 +11,8 @@
 </head>
 
 <body>
-  <!-- language buttons -->
-  <button id="langbutton-en">English</button>
-  <button id="langbutton-fr"><a href="https://science-fair-with-the-cools.github.io/EcoTraQFR/">French</button></a>
-
   <main>
     <h1>EcoTraQ</h1>
-    <h2 id="subtitle">A Carbon Footprint Calculator</h2>
     <!-- Header to access different parts of the site -->
     <div id="header">
       <div class="sites">
@@ -29,17 +25,6 @@
         </a>
 
       </div>
-    </div>
-    <!-- Brief desc of project -->
-    <div id="projectDesc">
-      <h2>Our Mission:</h2>
-
-      <p>People live their everyday lives oblivious that every decision they make alters their impact on our
-        environment. EcoTraQ is a carbon footprint calculator that helps people understand and reduce their
-        environmental impact, it is a tool for tracking personal emissions and website carbon footprints. Users input
-        their lifestyle choices or website links to see how much carbon they release. By comparing user’s results with
-        the average emissions released per capita, we can better understand how to live a more efficient lifestyle. Our
-        project aims to raise awareness for individuals to take action towards a more sustainable future.</p>
     </div>
 
     <!-- Questionnaire section -->
@@ -196,25 +181,18 @@
 
     <!-- Footer -->
     <footer>
-      <h2 id="about">About:</h2>
-      <p id="credits">Designed completely in HTML, CSS, and JS. All results are to be taken as near estimates based on Canadian/Ontario,
-        average, and national/provincial data. </p>
-      <p id="credits1">Created by: Cameron Lemoine and Hasan Ahmed</p>
-      <p id="credits2"> With help from: Will Reavie and Aaron Chung and Dagan Heartmann</p>
-      <p>
-        <a href="https://github.com/Science-Fair-with-the-cools/EcoTraQ" id="github" target="_blank">GitHub Repository</a>
-      <div>
-        <a href="https://projectboard.world/ysc/project/ecotraq-carbon-footprint-calculator" id="pbpage" target="_blank">ProjectBoard
-          Page</a>
-        <div>
-          <br>
-          <a href="https://www.dropbox.com/scl/fi/nu5uc4ykhm51pbvhqn26s/Sources-for-Ottawa-Regional-Science-Fair-EcoTraQ.pdf?rlkey=g6tgpyron6yiebu480syyd8or&dl=0" target="_blank">Sources</a>
-        </div>
+      <div id="links">
+        <a href="https://www.instagram.com/ecositetraq/"><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-solid fa-atom"></i></a>
+        <a href="https://github.com/Science-Fair-with-the-cools/EcoTraQ"><i class="fa-brands fa-github"></i></a>
       </div>
-      </p>
-      <div class="buttons">
-        <button id="topBtn" onclick="backToTop()">Back to top</button>
-      </div>
+      <select id="credits" name="creditsSelect" required>
+        <option value="">Credits:</option>
+        <option>Hasan Ahmed</option>
+        <option>Cameron Lemoine</option>
+        <option>Banhan Nguyen</option>
+        <option>Dagan Heartmann</option>
+      </select>
     </footer>
     
   </main>
