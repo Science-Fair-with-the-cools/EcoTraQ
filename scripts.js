@@ -1,11 +1,4 @@
 
-  
- // Scroll to top
- function backToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
 // Get textbox for summary
 const summaryText = document.getElementById("resultBox");
 
