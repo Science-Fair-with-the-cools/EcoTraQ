@@ -19,7 +19,7 @@ body {
 /* Navigation Bar */
 #header {
   width: 100%;
-  background-color: #8b5a2b; /* Warm brown for nav */
+  background-color: #8b5a2b; /* Warm brown */
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -39,9 +39,20 @@ body {
   margin: 0 10px;
 }
 
+/* Reusable Section Container - matches the form design */
+.section-container {
+  background-color: #f5deb3; /* Same wheat-colored background as form */
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
 /* Form Section */
 #form {
-  background-color: #f5deb3; /* Wheat-colored background */
+  /* Inherit .section-container styling if desired */
+  background-color: #f5deb3;
   width: 90%;
   max-width: 800px;
   margin: 20px auto;
@@ -72,4 +83,135 @@ body {
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size
+  font-size: 16px;
+}
+
+/* Submit Button */
+#sumbitButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #8b5a2b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#sumbitButton:hover {
+  background-color: #724d21;
+}
+
+/* Summary Section */
+/* Apply the same container look as the form by using .section-container */
+#resultBox {
+  /* In case you want to add specific styles to the summary text */
+  text-align: center;
+  color: #000;
+}
+
+/* Navigation Buttons for Section Summaries */
+#navBtns {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#navBtns button {
+  flex: 1;
+  max-width: 150px;
+  padding: 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #80ED99;
+  color: #000;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#navBtns button:hover {
+  background-color: #57CC99;
+}
+
+/* Graphs and Worlds Section */
+/* Also using the same container style as the form */
+#charts {
+  background-color: #f5deb3;
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Chart canvases styling, if needed */
+#charts canvas {
+  background-color: #f5deb3;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Earth Comparison / Worlds Text Section inside Charts */
+#worldsText {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+#worldsText p {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background-color: #f5deb3;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer #links a {
+  margin: 0 10px;
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+footer select {
+  padding: 5px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  #header h1 {
+    font-size: 28px;
+  }
+  
+  #form,
+  .section-container,
+  #resultBox,
+  #charts {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  #navBtns button {
+    font-size: 14px;
+    margin: 0 3px;
+  }
+  
+  footer #links a {
+    font-size: 16px;
+    margin: 0 5px;
+  }
+}
