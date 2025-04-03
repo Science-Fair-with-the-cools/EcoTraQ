@@ -15,7 +15,7 @@
     <!-- Header to access different parts of the site -->
     <div id="header">
       <div class="sites">
-         <a href="https://science-fair-with-the-cools.github.io/Homepage/">Home Page</a> 
+        <a href="https://science-fair-with-the-cools.github.io/Homepage/">Home Page</a>
       </div>
       <h1>EcoTraQ</h1>
       <div class="sites">
@@ -30,14 +30,15 @@
       <h2 id="questionsTitle">Questionnaire:</h2>
       <div id="questions">
         <form id="carbonForm">
-          <div class="question"><strong>Estimation</strong>
+          <div class="question"><strong>Estimation:</strong>
             <!-- Id is called pre-form -->
-            <p id="preForm"><strong>Before starting the questionnaire, estimate what you think your carbon footprint is. (**In tonnes**)</strong></p>
+            <p id="preForm">Before starting the questionnaire, estimate what you think your carbon footprint is.
+              (**In tonnes**)</p>
             <input id="predictionInp" type="number" min="1" required>
           </div>
-          
+
           <div class="question"><strong>Transportation</strong>
-            <p id="transportationText"><strong>1.</strong> How do you typically commute to school or work?</p>
+            <p id="transportationText">1. How do you typically commute to school or work?</p>
             <select id="transportSelect" name="transportation" required>
               <option value="">(select one)</option>
               <option value="Car">Gas Based Vehicle</option>
@@ -50,12 +51,13 @@
           </div>
 
           <div class="question">
-            <p id="commuteTimeText"><strong>2.</strong> How long does it usually take to commute to school or work? (km)</p>
+            <p id="commuteTimeText">2. How long does it usually take to commute to school or work? (km)
+            </p>
             <input id="commuteTimeInp" type="number" min="0" required>
           </div>
 
           <div class="question">
-            <p id="flightsText"><strong>3.</strong> How often do you take flights for leisure or business?</p>
+            <p id="flightsText">3. How often do you take flights for leisure or business?</p>
             <select id="flightsSelect" name="flights" required>
               <option value="">(select one)</option>
               <option value="multipleFlights">Multiple times a year</option>
@@ -65,7 +67,7 @@
           </div>
 
           <div class="question"><br><strong id="home">Housing</strong>
-            <p id="housingText"><strong>4.</strong> What type of housing do you reside in?</p>
+            <p id="housingText">4. What type of housing do you reside in?</p>
             <select id="housingSelect" name="housing" required>
               <option value="">(select one)</option>
               <option value="townHome">Town house</option>
@@ -76,34 +78,35 @@
           </div>
 
           <div class="question">
-            <p id="houseMembersText"><strong>5.</strong> How many occupants live in your home?</p>
+            <p id="houseMembersText">5. How many occupants live in your home?</p>
             <input id="occupantsInp" type="number" min="1" required>
           </div>
 
           <div class="question">
-            <p id="heatingText"><strong>6.</strong> How do you heat your home?</p>
+            <p id="heatingText">6. How do you heat your home?</p>
             <select id="heatingSelect" name="heating" required>
               <option value="">(select one)</option>
               <option value="GasHeat">Natural Gas</option>
               <option value="ElecHeat">Electricity</option>
-             
+
             </select>
           </div>
-          
+
           <div class="question">
-            <p id="appliancesText"><strong>7.</strong> Do you use any of the following? Dryer, washer, dishwasher, refrigerator, small appliances (microwave, toaster, etc.)</p>
+            <p id="appliancesText">7. Do you use any of the following? Dryer, washer, dishwasher,
+              refrigerator, small appliances (microwave, toaster, etc.)</p>
             <div id="boxInps">
-                <p>Dryer + Washer</p><input type="checkbox" id="dryerBox" value="dryer">
-                <p>Dishwasher</p><input type="checkbox" id="dishwashBox" value="dishwasher">
-                <p>Refrigerator</p><input type="checkbox" id="fridgeBox" value="refrigerator">
-                <p>Small appliances</p><input type="checkbox" id="smallAppliancesBox" value="smallApps">
-                <p>Electric Stove</p><input type="checkbox" id="stoveElecBox" value="stoveElec">
-                <p>Gas Stove</p><input type="checkbox" id="stoveGasBox" value="stoveGas">
+              <p>Dryer + Washer</p><input type="checkbox" id="dryerBox" value="dryer">
+              <p>Dishwasher</p><input type="checkbox" id="dishwashBox" value="dishwasher">
+              <p>Refrigerator</p><input type="checkbox" id="fridgeBox" value="refrigerator">
+              <p>Small appliances</p><input type="checkbox" id="smallAppliancesBox" value="smallApps">
+              <p>Electric Stove</p><input type="checkbox" id="stoveElecBox" value="stoveElec">
+              <p>Gas Stove</p><input type="checkbox" id="stoveGasBox" value="stoveGas">
             </div>
           </div>
 
           <div class="question"><br><strong id="habits">Habits</strong>
-            <p id="dietText"><strong>8.</strong> What best describes your diet?</p>
+            <p id="dietText">8. What best describes your diet?</p>
             <select id="dietSelect" name="diet" required>
               <option value="">(select one)</option>
               <option value="vegan">Vegan</option>
@@ -116,20 +119,20 @@
           </div>
 
           <div class="question">
-            <p id="showerText"><strong>9.</strong> How long is your average shower? (minutes)</p>
+            <p id="showerText">9. How long is your average shower? (minutes)</p>
             <input id="showerInp" type="number" min="0" required>
           </div>
 
           <div class="question">
-            <p id="recyclingText"><strong>10.</strong> Do you practise recycling or composting?</p>
+            <p id="recyclingText">10. Do you practise recycling or composting?</p>
             <div id="boxInps">
-                <p>Recycle</p><input type="checkbox" id="recyclingBox" value="recycle">
-                <p>Compost</p><input type="checkbox" id="compostBox" value="compost">
+              <p>Recycle</p><input type="checkbox" id="recyclingBox" value="recycle">
+              <p>Compost</p><input type="checkbox" id="compostBox" value="compost">
             </div>
           </div>
 
           <div class="question"><br><strong id="lifestyle">Lifestyle</strong>
-            <p id="clothesText"><strong>11.</strong> How often do you purchase new clothing?</p>
+            <p id="clothesText">11. How often do you purchase new clothing?</p>
             <select id="clothesSelect" name="clothesTime" required>
               <option value="">(select one)</option>
               <option value="oftenClothes">Multiple times per month</option>
@@ -140,37 +143,43 @@
           </div>
 
           <div class="question">
-            <p id="devicesText"><strong>12.</strong> How many personal devices do you own?
+            <p id="devicesText">12. How many personal devices do you own?</p>
             <div id="boxInps">
-              <div class="numComb"><p>Mobile Phone / Tablet</p><input id="numPhones" type="number" min="0" required></div>
-              <div class="numComb"><p>Laptop</p><input id="numLaptops" type="number" min="0" required></div>
-              <div class="numComb"><p>Desktop / Gaming Console</p><input id="numDesktops" type="number" min="0" required></div>
-              <div class="numComb"><p>TV / Monitor</p><input id="numTV" type="number" min="0" required></div>
+              <div class="numComb">
+                <p>Mobile Phone / Tablet</p><input id="numPhones" type="number" min="0" required>
+              </div>
+              <div class="numComb">
+                <p>Laptop</p><input id="numLaptops" type="number" min="0" required>
+              </div>
+              <div class="numComb">
+                <p>Desktop / Gaming Console</p><input id="numDesktops" type="number" min="0" required>
+              </div>
+              <div class="numComb">
+                <p>TV / Monitor</p><input id="numTV" type="number" min="0" required>
+              </div>
             </div>
           </div>
-          
+
       </div>
       <br>
       <input id="sumbitButton" type="submit">
       <br>
-      <div id="result">
-      </div>
+      <div id="result"></div>
     </div>
     </div>
 
     <div id="resultBox">
-        <h2>Summary</h2>
-        <div id="resultSection">
-            <h3 id="resultsTitle"></h3>
-            <p id="resultsText">When you complete the form your summary will be displayed here.</p>
-        </div>
+      <div id="resultSection">
+        <h3 id="resultsTitle"></h3>
+        <p id="resultsText">When you complete the form your summary will be displayed here.</p>
+      </div>
     </div>
 
-    <div id="navBtns">    
+    <div id="navBtns">
     </div>
 
-    <div id="charts">
-      <div id="piChart"> 
+    <div style="visibility:hidden" id="charts">
+      <div id="piChart">
       </div>
 
       <div id="barGraphA">
@@ -184,7 +193,8 @@
     <footer>
       <div id="links">
         <a href="https://www.instagram.com/ecositetraq/">Instagram</a>
-        <a href="https://partner.projectboard.world/ysc/project/ecotraq-carbon-footprint-calculator-qbmjzj?rc=jdmrnary">Project Board</a>
+        <a href="https://partner.projectboard.world/ysc/project/ecotraq-carbon-footprint-calculator-qbmjzj?rc=jdmrnary">Project
+          Board</a>
         <a href="https://github.com/Science-Fair-with-the-cools/EcoTraQ">GitHub</a>
       </div>
       <select id="credits" name="creditsSelect" required>
@@ -195,13 +205,11 @@
         <option>Dagan Heartmann</option>
       </select>
     </footer>
-    
   </main>
 
-  <script src="scripts.js"></script>
-  <script
-  src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
   </script>
-  
 </body>
+
 </html>
