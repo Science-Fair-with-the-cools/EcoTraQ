@@ -1,4 +1,12 @@
 
+
+  
+ // Scroll to top
+ function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
 // Get textbox for summary
 const summaryText = document.getElementById("resultBox");
 
@@ -174,7 +182,8 @@ document.getElementById("sumbitButton").addEventListener("click", function CalcE
    resultElement.innerText = `Your estimated total carbon footprint is ${totalEmissions} tons of CO2 per year. \nYour estimated carbon footprint was ${numInput.value} tons. \nTake a look at how they compare! \n**For Reference** Ontario’s emissions per capita are the third lowest in Canada, at 10.4 tonnes of CO2 \nThis is 43% below the Canadian average of 18.2 tonnes per capita.`;
 
    // Create buttons
-   summaryBtns.innerHTML = `<button id="btn1" onclick="summaryManager(1)"></button>
+console.log("Creating buttons in navBtns"); // Log to check if this part is executed
+summaryBtns.innerHTML = `<button id="btn1" onclick="summaryManager(1)"></button>
                             <button id="btn2" onclick="summaryManager(2)"></button>
                             <button id="btn3" onclick="summaryManager(3)"></button>
                             <button id="btn4" onclick="summaryManager(4)"></button>`;
@@ -245,7 +254,7 @@ new Chart("barChartA", {
 
 numOfWorlds = Math.ceil((totalEmissions * 8191988453) / 100000000000)
 // 12 125 424 420 tons annually (How much earth can take from human production)
-worldsText.innerHTML += `<p>If everyone's carbon footprint was the same as yours. Our society would require ${numOfWorlds} Earths to live sustainably</p>`
+worldsText.innerHTML += `<p>If everyone's carbon footprint was the same as yours. Our society would require ${numOfWorlds} Earths to live sustainably...</p>`
 
 for(i = 0; i < numOfWorlds; i++){
   worldsText.innerHTML += `<img src="https://imgs.search.brave.com/KAF_7FehoNYG97ZheOYW4DtefIGZk_UTLFlge6aPYyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbmcu/cG5ndHJlZS5jb20v/ZWxlbWVudF9waWMv/MTYvMDUvMjkvMDA1/NzQ5YzQwODU1MDUy/LnBuZw" alt="Earth"/>`
