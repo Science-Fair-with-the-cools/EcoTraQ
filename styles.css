@@ -1,223 +1,234 @@
-
 /* Global Reset & Box Sizing */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Overall Page Layout */
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #004d26; /* Deep green background */
-    color: #000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 30px;
-  }
-  
-  /* Navigation Bar */
-  #header {
-    width: 100%;
-    background-color: #8b5a2b; /* Warm brown */
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    border-radius: 10px;
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Overall Page Layout */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #004d26;
+  /* Deep green background */
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+/* Navigation Bar */
+#header {
+  width: 100%;
+  background-color: #8b5a2b;
+  /* Warm brown */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+#header h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+#header .sites a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+/* Reusable Section Container - matches the form design */
+.section-container {
+  background-color: #8b5a2b;
+  /* Same wheat-colored background as form */
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Form Section */
+#form {
+  /* Inherit .section-container styling if desired */
+  background-color: #8b5a2b;
+  color: white;
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#form h2 {
+  text-align: center;
+  color: white;
+  /* Dark green */
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+#form .question {
+  margin-bottom: 15px;
+}
+
+#form .question p {
+  margin-bottom: 5px;
+}
+
+#form input[type="number"],
+#form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Submit Button */
+#sumbitButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #004d26;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#sumbitButton:hover {
+  background-color: #f5deb3;
+  color: #000000;
+}
+
+input[type="checkbox"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #f5deb3;
+}
+
+/* Summary Section */
+/* Apply the same container look as the form by using .section-container */
+#resultBox {
+  /* In case you want to add specific styles to the summary text */
+  color: #000;
+  background-color: #f5deb3;
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Navigation Buttons for Section Summaries */
+#navBtns {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#navBtns button {
+  flex: 1;
+  max-width: 150px;
+  padding: 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #80ED99;
+  color: #000;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#navBtns button:hover {
+  background-color: #57CC99;
+}
+
+/* Graphs and Worlds Section */
+/* Also using the same container style as the form */
+#charts {
+  background-color: #f5deb3;
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Chart canvases styling, if needed */
+#charts canvas {
+  background-color: #f5deb3;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Earth Comparison / Worlds Text Section inside Charts */
+#worldsText {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+#worldsText p {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background-color: #8b5a2b;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+footer #links a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+footer select {
+  padding: 5px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
   #header h1 {
-    font-size: 36px;
-    text-align: center;
-  }
-  
-  #header .sites a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    margin: 0 10px;
-  }
-  
-  /* Reusable Section Container - matches the form design */
-  .section-container {
-    background-color: #f5deb3; /* Same wheat-colored background as form */
-    width: 90%;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  /* Form Section */
-  #form {
-    /* Inherit .section-container styling if desired */
-    background-color: #f5deb3;
-    width: 90%;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  #form h2 {
-    text-align: center;
-    color: #006400; /* Dark green */
     font-size: 28px;
-    margin-bottom: 20px;
   }
-  
-  #form .question {
-    margin-bottom: 15px;
-  }
-  
-  #form .question p {
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  #form input[type="number"],
-  #form select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  /* Submit Button */
-  #sumbitButton {
-    width: 100%;
-    padding: 12px;
-    background-color: #8b5a2b;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    margin-bottom: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #sumbitButton:hover {
-    background-color: #724d21;
-  }
-  
-  /* Summary Section */
-  /* Apply the same container look as the form by using .section-container */
-  #resultBox {
-    /* In case you want to add specific styles to the summary text */
-    text-align: center;
-    color: #000;
-    background-color: #f5deb3;
-    width: 90%;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-  }
-  
-  /* Navigation Buttons for Section Summaries */
-  #navBtns {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  #navBtns button {
-    flex: 1;
-    max-width: 150px;
-    padding: 10px;
-    margin: 0 5px;
-    border: none;
-    border-radius: 5px;
-    background-color: #80ED99;
-    color: #000;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  #navBtns button:hover {
-    background-color: #57CC99;
-  }
-  
-  /* Graphs and Worlds Section */
-  /* Also using the same container style as the form */
+
+  #form,
+  .section-container,
+  #resultBox,
   #charts {
-    background-color: #f5deb3;
-    width: 90%;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
+    width: 95%;
+    padding: 15px;
   }
-  
-  /* Chart canvases styling, if needed */
-  #charts canvas {
-    background-color: #f5deb3;
-    border-radius: 10px;
-    padding: 10px;
-  }
-  
-  /* Earth Comparison / Worlds Text Section inside Charts */
-  #worldsText {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 16px;
-  }
-  
-  #worldsText p {
-    margin-bottom: 10px;
-  }
-  
-  /* Footer */
-  footer {
-    width: 100%;
-    background-color: #f5deb3;
-    padding: 10px 0;
-    text-align: center;
-    margin-top: 20px;
-    border-radius: 10px;
-  }
-  
+
   footer #links a {
-    margin: 0 10px;
-    color: #000;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  footer select {
-    padding: 5px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
     font-size: 16px;
+    margin: 0 5px;
+    color: white;
+    padding: 2px;
+    border-radius: 10px;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 600px) {
-    #header h1 {
-      font-size: 28px;
-    }
-    
-    #form,
-    .section-container,
-    #resultBox,
-    #charts {
-      width: 95%;
-      padding: 15px;
-    }
-    
-    footer #links a {
-      font-size: 16px;
-      margin: 0 5px;
-    }
-  }
-  
+}
