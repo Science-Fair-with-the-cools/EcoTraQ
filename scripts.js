@@ -172,7 +172,7 @@ document.getElementById("sumbitButton").addEventListener("click", function CalcE
 
   // Display result
   let resultElement = document.getElementById("result");
-  resultElement.innerText = `Your estimated total carbon footprint is ${totalEmissions} tons of CO2 per year. \nYour estimated carbon footprint was ${numInput.value} tons. \nTake a look at how they compare! \n**For Reference** Ontario’s emissions per capita are the third lowest in Canada, at 10.4 tonnes of CO2 \nThis is 43% below the Canadian average of 18.2 tonnes per capita.`;
+  resultElement.innerText = `Your estimated total carbon footprint is ${totalEmissions} tons of CO2 per year. \n You estimated your carbon footprint would be ${numInput.value} tons. \n For Reference: Ontario’s emissions per capita are the third lowest in Canada, at 10.4 tonnes of CO2 \nThis is 43% below the Canadian average of 18.2 tonnes per capita.`;
 
   // Create buttons
   summaryBtns.innerHTML = `<button id="btn1" onclick="summaryManager(1)"></button>
