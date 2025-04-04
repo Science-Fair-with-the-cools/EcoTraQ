@@ -246,7 +246,7 @@ document.getElementById("sumbitButton").addEventListener("click", function CalcE
 
   numOfWorlds = Math.ceil((totalEmissions * 8191988453) / 100000000000)
   // 12 125 424 420 tons annually (How much earth can take from human production)
-  worldsText.innerHTML += `<p>If everyone's carbon footprint was the same as yours. Our society would require ${numOfWorlds} Earths to live sustainably...</p>`
+  worldsText.innerHTML += `<p>If everyone's carbon footprint was the same as yours, our society would require ${numOfWorlds} Earths to live sustainably...</p>`
 
   for (i = 0; i < numOfWorlds; i++) {
     worldsText.innerHTML += `<img src="https://imgs.search.brave.com/KAF_7FehoNYG97ZheOYW4DtefIGZk_UTLFlge6aPYyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbmcu/cG5ndHJlZS5jb20v/ZWxlbWVudF9waWMv/MTYvMDUvMjkvMDA1/NzQ5YzQwODU1MDUy/LnBuZw" width="120" height="120" alt="Earth"/>`
