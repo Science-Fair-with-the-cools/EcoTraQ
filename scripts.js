@@ -187,7 +187,7 @@ document.getElementById("sumbitButton").addEventListener("click", function CalcE
 
   var xValues = ["Your emissions", "Ontario Average", "Canadian Average"];
   var yValues = [totalEmissions, 10.4, 18.2];
-  var barColors = ["#b91d47", "#00aba9", "#2b5797"];
+  var barColors = ["#104730", "#A67B5C", "#F9C76D"];
 
   new Chart("pieChart", {
     type: "pie",
@@ -209,7 +209,7 @@ document.getElementById("sumbitButton").addEventListener("click", function CalcE
   const maxValue = Math.max(totalEmissions, numInput.value);
   const canvasHeight = maxValue * 10; // Adjust the multiplier as needed for better visibility
 
-  barGraphA.innerHTML = `<canvas id="barChartA" style="width:100%; max-width:350px; height:${canvasHeight}px;"></canvas>`;
+  barGraphA.innerHTML = `<canvas id="barChartA" style="width:100%; max-width:700px; height:${canvasHeight + 10}px;"></canvas>`;
 
   new Chart("barChartA", {
     type: 'bar',
@@ -219,12 +219,12 @@ document.getElementById("sumbitButton").addEventListener("click", function CalcE
         label: 'Tons of CO2 (Every Year)',
         data: [totalEmissions, numInput.value],
         backgroundColor: [
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
+          'rgba(16, 71, 48, 0.2)',
+          'rgba(166, 123, 92, 0.2)',
         ],
         borderColor: [
-          'rgba(54, 162, 235, 1)',
-          'rgba(153, 102, 255, 1)',
+          'rgba(16, 71, 48, 1)',
+          'rgba(166, 123, 92, 1)',
         ],
         borderWidth: 1
       }]
@@ -246,10 +246,10 @@ document.getElementById("sumbitButton").addEventListener("click", function CalcE
 
   numOfWorlds = Math.ceil((totalEmissions * 8191988453) / 100000000000)
   // 12 125 424 420 tons annually (How much earth can take from human production)
-  worldsText.innerHTML += `<p>If everyone's carbon footprint was the same as yours. Our society would require ${numOfWorlds} Earths to live sustainably</p>`
+  worldsText.innerHTML += `<p>If everyone's carbon footprint was the same as yours. Our society would require ${numOfWorlds} Earths to live sustainably...</p>`
 
   for (i = 0; i < numOfWorlds; i++) {
-    worldsText.innerHTML += `<img src="https://imgs.search.brave.com/KAF_7FehoNYG97ZheOYW4DtefIGZk_UTLFlge6aPYyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbmcu/cG5ndHJlZS5jb20v/ZWxlbWVudF9waWMv/MTYvMDUvMjkvMDA1/NzQ5YzQwODU1MDUy/LnBuZw" alt="Earth"/>`
+    worldsText.innerHTML += `<img src="https://imgs.search.brave.com/KAF_7FehoNYG97ZheOYW4DtefIGZk_UTLFlge6aPYyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbmcu/cG5ndHJlZS5jb20v/ZWxlbWVudF9waWMv/MTYvMDUvMjkvMDA1/NzQ5YzQwODU1MDUy/LnBuZw" width="120" height="120" alt="Earth"/>`
   }
 
 });
@@ -276,10 +276,10 @@ function summaryManager(btnNum) {
             </p>`;
     }
 
-    document.getElementById("btn1").style.backgroundColor = '#57CC99';
-    document.getElementById("btn2").style.backgroundColor = '#80ED99';
-    document.getElementById("btn3").style.backgroundColor = '#80ED99';
-    document.getElementById("btn4").style.backgroundColor = '#80ED99';
+    document.getElementById("btn1").style.backgroundColor = '#F1DDB9';
+    document.getElementById("btn2").style.backgroundColor = '#A67B5C';
+    document.getElementById("btn3").style.backgroundColor = '#A67B5C';
+    document.getElementById("btn4").style.backgroundColor = '#A67B5C';
   }
 
   if (btnNum == 2) {
@@ -303,10 +303,10 @@ function summaryManager(btnNum) {
             </p>`;
     }
 
-    document.getElementById("btn1").style.backgroundColor = '#80ED99';
-    document.getElementById("btn2").style.backgroundColor = '#57CC99';
-    document.getElementById("btn3").style.backgroundColor = '#80ED99';
-    document.getElementById("btn4").style.backgroundColor = '#80ED99';
+    document.getElementById("btn1").style.backgroundColor = '#A67B5C';
+    document.getElementById("btn2").style.backgroundColor = '#F1DDB9';
+    document.getElementById("btn3").style.backgroundColor = '#A67B5C';
+    document.getElementById("btn4").style.backgroundColor = '#A67B5C';
   }
 
   if (btnNum == 3) {
@@ -330,10 +330,10 @@ function summaryManager(btnNum) {
             </p>`;
     }
 
-    document.getElementById("btn1").style.backgroundColor = '#80ED99';
-    document.getElementById("btn2").style.backgroundColor = '#80ED99';
-    document.getElementById("btn3").style.backgroundColor = '#57CC99';
-    document.getElementById("btn4").style.backgroundColor = '#80ED99';
+    document.getElementById("btn1").style.backgroundColor = '#A67B5C';
+    document.getElementById("btn2").style.backgroundColor = '#A67B5C';
+    document.getElementById("btn3").style.backgroundColor = '#F1DDB9';
+    document.getElementById("btn4").style.backgroundColor = '#A67B5C';
   }
 
   else if (btnNum == 4) {
@@ -357,9 +357,9 @@ function summaryManager(btnNum) {
           </p>`;
     }
 
-    document.getElementById("btn1").style.backgroundColor = '#80ED99';
-    document.getElementById("btn2").style.backgroundColor = '#80ED99';
-    document.getElementById("btn3").style.backgroundColor = '#80ED99';
-    document.getElementById("btn4").style.backgroundColor = '#57CC99';
+    document.getElementById("btn1").style.backgroundColor = '#A67B5C';
+    document.getElementById("btn2").style.backgroundColor = '#A67B5C';
+    document.getElementById("btn3").style.backgroundColor = '#A67B5C';
+    document.getElementById("btn4").style.backgroundColor = '#F1DDB9';
   }
 }
