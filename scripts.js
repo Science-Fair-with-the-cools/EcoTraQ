@@ -180,8 +180,8 @@ document.getElementById("sumbitButton").addEventListener("click", function CalcE
   // Summary
   summaryManager(1);
 
-  const maxValue = Math.ceil(totalEmissions, numInput.value);
-  const canvasHeight = maxValue * 10; // Adjust the multiplier as needed for better visibility
+  const maxValue = Math.max(totalEmissions, numInput.value);
+  const canvasHeight = Math.ceil(maxValue * 10); // Adjust the multiplier as needed for better visibility
 
   barGraphA.innerHTML = `<canvas id="barChartA" style="width:100%; max-width:700px; height:${canvasHeight}px;"></canvas>`;
 
