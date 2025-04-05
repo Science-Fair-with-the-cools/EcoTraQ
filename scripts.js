@@ -4,9 +4,6 @@ const summaryText = document.getElementById("resultBox");
 // Get the div so we can make the buttons
 const summaryBtns = document.getElementById("navBtns");
 
-// piChart holder
-const piGraph = document.getElementById("piChart");
-
 // barGraph holders
 const barGraphA = document.getElementById("barGraphA");
 
