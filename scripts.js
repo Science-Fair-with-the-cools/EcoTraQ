@@ -183,29 +183,6 @@ document.getElementById("sumbitButton").addEventListener("click", function CalcE
   // Summary
   summaryManager(1);
 
-  piGraph.innerHTML = `<canvas id="pieChart" style="width:100%;max-width:700px"></canvas>`;
-
-  var xValues = ["Your emissions", "Ontario Average", "Canadian Average"];
-  var yValues = [totalEmissions, 10.4, 18.2];
-  var barColors = ["#104730", "#A67B5C", "#F9C76D"];
-
-  new Chart("pieChart", {
-    type: "pie",
-    data: {
-      labels: xValues,
-      datasets: [{
-        backgroundColor: barColors,
-        data: yValues
-      }]
-    },
-    options: {
-      title: {
-        display: true,
-        text: "Your Carbon Emissions Compared to Canadian Averages"
-      }
-    }
-  });
-
   const maxValue = Math.max(totalEmissions, numInput.value);
   const canvasHeight = maxValue * 10; // Adjust the multiplier as needed for better visibility
 
@@ -214,17 +191,21 @@ document.getElementById("sumbitButton").addEventListener("click", function CalcE
   new Chart("barChartA", {
     type: 'bar',
     data: {
-      labels: ['Your Emissions', 'Your Estimate'],
+      labels: ['Your Emissions', 'Your Estimate', "Ontario Average", "Canadian Average"],
       datasets: [{
         label: 'Tons of CO2 (Every Year)',
-        data: [totalEmissions, numInput.value],
+        data: [totalEmissions, numInput.value, 10.4, 18.2],
         backgroundColor: [
           'rgba(16, 71, 48, 0.2)',
           'rgba(166, 123, 92, 0.2)',
+          'rgba(255, 253, 253, 0.2)',
+          'rgba(249, 199, 109, 0.2)'
         ],
         borderColor: [
           'rgba(16, 71, 48, 1)',
           'rgba(166, 123, 92, 1)',
+          'rgba(255, 253, 253, 1)',
+          'rgba(249, 199, 109, 1)'
         ],
         borderWidth: 1
       }]
